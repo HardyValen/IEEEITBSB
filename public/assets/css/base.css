@@ -1,0 +1,794 @@
+/* =================================================================== 
+ *
+ *  IEEE ITB SB 2019 Base Stylesheet
+ *  23-02-2019
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *      # Import Math Functions
+ *      # Custom Normalize
+ *      # Typography
+ *          -- REDEFINE ROOT FONT SIZE
+ *          -- DEFAULT FONT: Calibri Light
+ *          -- TYPOGRAPHY FONT SIZE -- Base 16 20
+ *      # Custom Scrollbar
+ *      # Google Material Input Text
+ * =================================================================== */
+/* Font - Playfair Display */
+/* ======================= */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900");
+/* font-family: 'Playfair Display', serif; */
+/* Font - Adobe Caslon Pro             */
+/* =================================== */
+@font-face {
+  font-family: "Adobe Caslon Pro Regular", sans-serif;
+  src: url("../font/ACaslonPro/ACaslonPro-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro Bold", sans-serif;
+  src: url("../font/ACaslonPro/ACaslonPro-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro Bold Italic", sans-serif;
+  src: url("../font/ACaslonPro/ACaslonPro-BoldItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro Italic", sans-serif;
+  src: url("../font/ACaslonPro/ACaslonPro-Italic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro Semibold", sans-serif;
+  src: url("../font/ACaslonPro/ACaslonPro-Semibold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro Semibold Italic", sans-serif;
+  src: url("../font/ACaslonPro/ACaslonPro-SemiboldItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font - Calibri                      */
+/* =================================== */
+@font-face {
+  font-family: "Calibri", sans-serif;
+  src: url("../font/Calibri.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Calibri Light", sans-serif;
+  src: url("../font/calibril.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Calibri Bold", sans-serif;
+  src: url("../font/CALIBRIB.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Calibri Italic", sans-serif;
+  src: url("../font/CALIBRII.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Calibri Italic Bold", sans-serif;
+  src: url("../font/CALIBRIZ.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font - Formata                      */
+/* =================================== */
+@font-face {
+  font-family: "Formata Bold", sans-serif;
+  src: url("../font/Formata/Formata-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Bold Condensed Italic", sans-serif;
+  src: url("../font/Formata/Formata-BoldCondensedItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Bold Italic", sans-serif;
+  src: url("../font/Formata/Formata-BoldItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Condensed Italic SC", sans-serif;
+  src: url("../font/Formata/Formata-CnItalicSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Condensed", sans-serif;
+  src: url("../font/Formata/Formata-Condensed.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Condensed Expert", sans-serif;
+  src: url("../font/Formata/Formata-CondensedExpert.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Condensed Italic", sans-serif;
+  src: url("../font/Formata/Formata-CondensedItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Condensed Italic SC", sans-serif;
+  src: url("../font/Formata/Formata-CondensedSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Italic", sans-serif;
+  src: url("../font/Formata/Formata-Italic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Italic Expert", sans-serif;
+  src: url("../font/Formata/Formata-ItalicExpert.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Italic SC", sans-serif;
+  src: url("../font/Formata/Formata-ItalicSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light", sans-serif;
+  src: url("../font/Formata/Formata-Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light Condensed Italic SC", sans-serif;
+  src: url("../font/Formata/Formata-LightCnItalicSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light Condensed SC", sans-serif;
+  src: url("../font/Formata/Formata-LightCnSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light Condensed", sans-serif;
+  src: url("../font/Formata/Formata-LightCondensed.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light Condensed Italic", sans-serif;
+  src: url("../font/Formata/Formata-LightCondensedItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light Italic", sans-serif;
+  src: url("../font/Formata/Formata-LightItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light Italic SC", sans-serif;
+  src: url("../font/Formata/Formata-LightItalicSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Light SC", sans-serif;
+  src: url("../font/Formata/Formata-LightSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Medium", sans-serif;
+  src: url("../font/Formata/Formata-Medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Medium Condensed", sans-serif;
+  src: url("../font/Formata/Formata-MediumCondensed.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Medium Condensed Italic", sans-serif;
+  src: url("../font/Formata/Formata-MediumCondensedItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Medium Italic", sans-serif;
+  src: url("../font/Formata/Formata-MediumItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Regular", sans-serif;
+  src: url("../font/Formata/Formata-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formata Regular SC", sans-serif;
+  src: url("../font/Formata/Formata-RegularSC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Calling Font Classes */
+.formata-bold {
+  font-family: 'Formata Bold', sans-serif !important;
+}
+
+.formata-bold-condensed-italic {
+  font-family: 'Formata Bold Condensed Italic', sans-serif !important;
+}
+
+.formata-bold-italic {
+  font-family: 'Formata Bold Italic', sans-serif !important;
+}
+
+.formata-condensed-italic-sc {
+  font-family: 'Formata Condensed Italic SC', sans-serif !important;
+}
+
+.formata-condensed {
+  font-family: 'Formata Condensed', sans-serif !important;
+}
+
+.formata-condensed-expert {
+  font-family: 'Formata Condensed Expert', sans-serif !important;
+}
+
+.formata-condensed-italic {
+  font-family: 'Formata Condensed Italic', sans-serif !important;
+}
+
+.formata-condensed-sc {
+  font-family: 'Formata Condensed SC', sans-serif !important;
+}
+
+.formata-italic {
+  font-family: 'Formata Italic', sans-serif !important;
+}
+
+.formata-italic-expert {
+  font-family: 'Formata Italic Expert', sans-serif !important;
+}
+
+.formata-italic-sc {
+  font-family: 'Formata Italic SC', sans-serif !important;
+}
+
+.formata-light {
+  font-family: 'Formata Light', sans-serif !important;
+}
+
+.formata-light-condensed-italic-sc {
+  font-family: 'Formata Light Condensed Italic SC', sans-serif !important;
+}
+
+.formata-light-condensed-sc {
+  font-family: 'Formata Light Condensed SC', sans-serif !important;
+}
+
+.formata-light-condensed {
+  font-family: 'Formata Light Condensed', sans-serif !important;
+}
+
+.formata-light-condensed-italic {
+  font-family: 'Formata Light Condensed Italic', sans-serif !important;
+}
+
+.formata-light-italic {
+  font-family: 'Formata Light Italic', sans-serif !important;
+}
+
+.formata-light-italic-sc {
+  font-family: 'Formata Light Italic SC', sans-serif !important;
+}
+
+.formata-light-sc {
+  font-family: 'Formata Light SC', sans-serif !important;
+}
+
+.formata-medium {
+  font-family: 'Formata Medium', sans-serif !important;
+}
+
+.formata-medium-condensed {
+  font-family: 'Formata Medium Condensed', sans-serif !important;
+}
+
+.formata-medium-condensed-italic {
+  font-family: 'Formata Medium Condensed Italic', sans-serif !important;
+}
+
+.formata-medium-italic {
+  font-family: 'Formata Medium Italic', sans-serif !important;
+}
+
+.formata-regular {
+  font-family: 'Formata Regular', sans-serif !important;
+}
+
+.formata-regular-SC {
+  font-family: 'Formata Regular SC', sans-serif !important;
+}
+
+.calibri {
+  font-family: 'Calibri', sans-serif !important;
+}
+
+.calibri-light {
+  font-family: 'Calibri Light', sans-serif !important;
+}
+
+.calibri-bold {
+  font-family: 'Calibri Bold', sans-serif !important;
+}
+
+.calibri-italic {
+  font-family: 'Calibri Italic', sans-serif !important;
+}
+
+.calibri-bold-italic {
+  font-family: 'Calibri Italic Bold', sans-serif !important;
+}
+
+.acaslonpro {
+  font-family: 'Adobe Caslon Pro Regular', serif !important;
+}
+
+.acaslonpro-bold {
+  font-family: 'Adobe Caslon Pro Bold', serif !important;
+}
+
+.acaslonpro-italic {
+  font-family: 'Adobe Caslon Pro Italic', serif !important;
+}
+
+.acaslonpro-bolditalic {
+  font-family: 'Adobe Caslon Pro Bold Italic', serif !important;
+}
+
+.acaslonpro-semibold {
+  font-family: 'Adobe Caslon Pro Semibold', serif !important;
+}
+
+.acaslonpro-semibolditalic {
+  font-family: 'Adobe Caslon Pro Semibold Italic', serif !important;
+}
+
+/* MIXIN FOR CUSTOM RANGE OF FLUID SIZES
+ *  -- Menerima masukan batas bawah font size 'floor' dan batas atas font size 'ceiling', satuan rem!
+ *  -- Mengeluarkan kode css yang membuat transisi antara floor dan ceiling 'fluid'     
+ *
+ *  -- TABLE OF CONTENT
+ *  -- 1. Width
+ *  -- 2. Padding
+ *  -- 3. Margin
+ *  -- 4. Font-Size
+ *  -- 5. Letter-Spacing  
+ *  -- 6. Responsive Border
+ */
+/* -- 01. Mixin untuk fluid width -- */
+/* -- 02. Mixin untuk fluid padding -- */
+/* -- 03. Mixin untuk fluid margin -- */
+/* -- 05. Mixin untuk fluid font size -- */
+/* -- 06. Mixin untuk fluid letter spacing -- */
+/* -- 07. Mixin untuk Responsive Border (Satu Sisi) -- */
+/* ===================================================================
+ * # Custom Normalize
+ * ------------------------------------------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+main {
+  display: block;
+  height: 100%;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+/* ===================================================================
+* # Typography
+* ------------------------------------------------------------------- */
+/* -- REDEFINE ROOT FONT SIZE __ from 16px to 10px, default value rem, 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* -- DEFAULT FONT: Calibri Light */
+/* Other options may include:
+*  # Calibri           .calibri
+*  # Calibri Bold      .calibri-bold
+*  # Calibri Italic    .calibri-italic
+*  # Calibri Light     .calibri-light */
+html {
+  font-family: 'Calibri Light', sans-serif;
+}
+
+/* -- TYPOGRAPHY FONT SIZE */
+/*      Font size table
+*
+*  Ratio : 1.25
+*
+*  Type        || Tag/Class    || Floor(rem)       || Ceiling(rem)    || Equivalent p   
+*  ===================================================================================
+*  Title       || h1.title     || 4.883            || 6.104           || -
+*  Heading 1   || h1           || 3.906            || 4.883           || -
+*  Heading 2   || h2           || 3.125            || 3.906           || -
+*  Heading 3   || h3           || 2.500            || 3.125           || p.xl-text
+*  Big text    || p.big-text   || 2.000            || 2.500           || p.big-text
+*  Basic p     || p            || 1.600            || 2.000           || -
+*  Small text  || p.small-text || 1.280            || 1.600           || p.small-text */
+/* -- Rasio tipografi -- */
+/* -- Font size dasar buat smartphone -- */
+/* -- Font size dasar buat laptop -- */
+h1.title {
+  font-size: 4.88281rem;
+}
+
+h1 {
+  font-size: 3.90625rem;
+}
+
+h2 {
+  font-size: 3.125rem;
+}
+
+h3, p.xl-text {
+  font-size: 2.5rem;
+}
+
+p.big-text {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+p.small-text {
+  font-size: 1.28rem;
+}
+
+@media only screen and (min-width: 320px) {
+  h1.title {
+    font-size: calc(4.883rem + (6.104 - 4.883) * (100vw - 32rem) / (96 - 32));
+  }
+  h1 {
+    font-size: calc(3.906rem + (4.883 - 3.906) * (100vw - 32rem) / (96 - 32));
+  }
+  h2 {
+    font-size: calc(3.125rem + (3.906 - 3.125) * (100vw - 32rem) / (96 - 32));
+  }
+  h3, p.big-text {
+    font-size: calc(2.500rem + (3.125 - 2.500) * (100vw - 32rem) / (96 - 32));
+  }
+  p.big-text {
+    font-size: calc(2.000rem + (2.500 - 2.000) * (100vw - 32rem) / (96 - 32));
+  }
+  p {
+    font-size: calc(1.600rem + (2.000 - 1.600) * (100vw - 32rem) / (96 - 32));
+  }
+  p.small-text {
+    font-size: calc(1.280rem + (1.600 - 1.280) * (100vw - 32rem) / (96 - 32));
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  h1.title {
+    font-size: 6.10352rem;
+  }
+  h1 {
+    font-size: 4.88281rem;
+  }
+  h2 {
+    font-size: 3.90625rem;
+  }
+  h3, p.xl-text {
+    font-size: 3.125rem;
+  }
+  p.big-text {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 2.000rem;
+  }
+  p.small-text {
+    font-size: 1.6rem;
+  }
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 960px) {
+  .row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media screen and (min-width: 960px) {
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* ===================================================================
+* # Custom ScrollBar
+* ------------------------------------------------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  opacity: 0.5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00629B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0090FB;
+}
+
+/* ===================================================================
+* # Custom Input
+* ------------------------------------------------------------------- */
+/* form starting stylings ------------------------------- */
+.group {
+  position: relative;
+  /* LABEL ======================================= */
+  /* active state */
+  /* BOTTOM BARS ================================= */
+  /* active state */
+}
+
+.group input {
+  padding: 7px 11px;
+  display: block;
+  border: 0.5px solid #9a9a9a;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  font-family: 'Calibri Light', sans-serif;
+}
+
+.group input {
+  width: 20rem;
+}
+
+@media screen and (min-width: 320px) {
+  .group input {
+    width: calc(20rem + 10 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .group input {
+    width: 30rem;
+  }
+}
+
+.group input {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .group input {
+    font-size: calc(1.2rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .group input {
+    font-size: 1.6rem;
+  }
+}
+
+.group input:focus {
+  outline: none;
+  border: 1px solid #00629B;
+}
+
+.group label {
+  color: #acacac;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 8px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  font-family: 'Formata Light', sans-serif;
+}
+
+.group label {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .group label {
+    font-size: calc(1.2rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .group label {
+    font-size: 1.6rem;
+  }
+}
+
+.group input:focus ~ label, .group input:not(:placeholder-shown) ~ label {
+  left: 7px;
+  top: -9px;
+  color: #00629B;
+  background-color: white;
+  padding: 0 3px;
+}
+
+.group input:focus ~ label, .group input:not(:placeholder-shown) ~ label {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .group input:focus ~ label, .group input:not(:placeholder-shown) ~ label {
+    font-size: calc(0.8rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .group input:focus ~ label, .group input:not(:placeholder-shown) ~ label {
+    font-size: 1rem;
+  }
+}
+
+.group .bar {
+  position: relative;
+  display: block;
+}
+
+.group .bar {
+  width: 20rem;
+}
+
+@media screen and (min-width: 320px) {
+  .group .bar {
+    width: calc(20rem + 10 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .group .bar {
+    width: 30rem;
+  }
+}
+
+.group .bar:before, .group .bar:after {
+  content: '';
+  height: 3px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #00629B;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.group .bar:before {
+  left: 50%;
+}
+
+.group .bar:after {
+  right: 50%;
+}
+
+.group input:focus ~ .bar:before, .group input:focus ~ .bar:after {
+  width: 50%;
+}
+/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,27 @@
+
+@mixin responsivealign($default, $resp) {
+    & {
+        text-align:$default;
+        @media screen and (min-width: 960px) {
+           text-align:$resp; 
+        }
+    }
+}
+
+@mixin responsiveflexalign($default, $resp) {
+    & {
+        align-items:$default;
+        @media screen and (min-width: 960px) {
+           align-items:$resp; 
+        }
+    }
+}
+
+@mixin responsiveflexjustify($default, $resp) {
+    & {
+        justify-content:$default;
+        @media screen and (min-width: 960px) {
+           justify-content:$resp; 
+        }
+    }
+}

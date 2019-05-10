@@ -1,0 +1,319 @@
+/* =================================================================== 
+ *
+ *  IEEE ITB SB 2019 Base Stylesheet
+ *  23-02-2019
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *      # Import Math Functions
+ *      # Custom Normalize
+ *      # Typography
+ *          -- REDEFINE ROOT FONT SIZE
+ *          -- DEFAULT FONT: Calibri Light
+ *          -- TYPOGRAPHY FONT SIZE -- Base 16 20
+ *      # Custom Scrollbar
+ *      # Google Material Input Text
+ * =================================================================== */
+
+ @import 'module/math';
+ @import 'module/fonts';
+ @import 'module/mixin-fluid';
+
+/* ===================================================================
+ * # Custom Normalize
+ * ------------------------------------------------------------------- */
+ html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    max-width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+main {
+    display: block;
+    height: 100%;
+}
+
+article, aside, footer, header, nav, section {
+    display: block;
+}
+
+/* ===================================================================
+* # Typography
+* ------------------------------------------------------------------- */
+
+/* -- REDEFINE ROOT FONT SIZE __ from 16px to 10px, default value rem, 1rem = 10px */
+html {
+    font-size: 62.5%;
+}
+
+/* -- DEFAULT FONT: Calibri Light */
+/* Other options may include:
+*  # Calibri           .calibri
+*  # Calibri Bold      .calibri-bold
+*  # Calibri Italic    .calibri-italic
+*  # Calibri Light     .calibri-light */
+
+html {
+    font-family: 'Calibri Light', sans-serif;
+}
+
+/* -- TYPOGRAPHY FONT SIZE */
+/*      Font size table
+*
+*  Ratio : 1.25
+*
+*  Type        || Tag/Class    || Floor(rem)       || Ceiling(rem)    || Equivalent p   
+*  ===================================================================================
+*  Title       || h1.title     || 4.883            || 6.104           || -
+*  Heading 1   || h1           || 3.906            || 4.883           || -
+*  Heading 2   || h2           || 3.125            || 3.906           || -
+*  Heading 3   || h3           || 2.500            || 3.125           || p.xl-text
+*  Big text    || p.big-text   || 2.000            || 2.500           || p.big-text
+*  Basic p     || p            || 1.600            || 2.000           || -
+*  Small text  || p.small-text || 1.280            || 1.600           || p.small-text */
+
+$ratio: 1.25;           /* -- Rasio tipografi -- */
+$base-mobile: 1.6rem;   /* -- Font size dasar buat smartphone -- */
+$base-laptop: 2.0rem;   /* -- Font size dasar buat laptop -- */
+
+h1.title {
+    font-size: $base-mobile * pow($ratio, 5);  
+}
+
+h1 {
+    font-size: $base-mobile * pow($ratio, 4);     
+}
+
+h2 {
+    font-size: $base-mobile * pow($ratio, 3);    
+}
+
+h3, p.xl-text {
+    font-size: $base-mobile * pow($ratio, 2);    
+}
+
+p.big-text{
+    font-size: $base-mobile * pow($ratio, 1);   
+}
+
+p {
+    font-size: $base-mobile;
+}
+
+p.small-text {
+    font-size: $base-mobile * pow($ratio, -1);
+}
+
+@media only screen and (min-width: 320px) {
+    h1.title {
+        font-size: calc(4.883rem + (6.104 - 4.883) * (100vw - 32rem) / (96 - 32));   
+    }
+
+    h1 {
+        font-size: calc(3.906rem + (4.883 - 3.906) * (100vw - 32rem) / (96 - 32));   
+    }
+
+    h2 {
+        font-size: calc(3.125rem + (3.906 - 3.125) * (100vw - 32rem) / (96 - 32));   
+    }
+
+    h3, p.big-text {
+        font-size: calc(2.500rem + (3.125 - 2.500) * (100vw - 32rem) / (96 - 32));     
+    }
+
+    p.big-text {
+        font-size: calc(2.000rem + (2.500 - 2.000) * (100vw - 32rem) / (96 - 32));   
+    }
+
+    p {
+        font-size: calc(1.600rem + (2.000 - 1.600) * (100vw - 32rem) / (96 - 32));     
+    }
+
+    p.small-text {
+        font-size: calc(1.280rem + (1.600 - 1.280) * (100vw - 32rem) / (96 - 32));   
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    h1.title {
+        font-size: $base-laptop * pow($ratio, 5);
+    }
+
+    h1 {
+        font-size: $base-laptop * pow($ratio, 4);    
+    }
+
+    h2 {
+        font-size: $base-laptop * pow($ratio, 3);    
+    }
+
+    h3, p.xl-text {
+        font-size: $base-laptop * pow($ratio, 2);   
+    }
+
+    p.big-text{
+        font-size: $base-laptop * pow($ratio, 1);   
+    }
+
+    p {
+        font-size: 2.000rem;
+    }
+
+    p.small-text {
+        font-size: $base-laptop * pow($ratio, -1);
+    }
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    @media screen and (min-width:960px) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @media screen and (min-width:960px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* ===================================================================
+* # Custom ScrollBar
+* ------------------------------------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    opacity: 0.5;
+}
+    
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #00629B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0090FB;
+}
+
+/* ===================================================================
+* # Custom Input
+* ------------------------------------------------------------------- */
+
+/* form starting stylings ------------------------------- */
+.group { 
+    position:relative; 
+
+    input {
+        padding:7px 11px;
+        display:block;
+        border:0.5px solid #9a9a9a;
+        border-radius: 4px;
+        margin-top:1.5rem;
+        font-family: 'Calibri Light', sans-serif;
+
+        @include fluidwidth(20rem, 30rem);
+        @include fluidfontsize(1.2rem, 1.6rem);
+    }
+
+    input:focus { 
+        outline:none; 
+        border:1px solid #00629B;
+    }
+
+    /* LABEL ======================================= */
+    label {
+        color:darken( #dfdfdf, 20%);
+        position:absolute;
+        pointer-events:none;
+        left:15px;
+        top:8px;
+        transition:0.2s ease all;
+        font-family: 'Formata Light', sans-serif;
+
+        @include fluidfontsize(1.2rem, 1.6rem);
+    }
+
+    /* active state */ //input:valid ~ label
+    input:focus ~ label, input:not(:placeholder-shown) ~ label {
+        left:7px;
+        top:-9px;
+        color:#00629B;
+        background-color: white;
+        padding: 0 3px;
+
+        @include fluidfontsize(0.8rem, 1.0rem);
+    }
+
+    /* BOTTOM BARS ================================= */
+    .bar 	{
+        position:relative; 
+        display:block; 
+        
+        @include fluidwidth(20rem, 30rem);
+    }
+
+    .bar:before, .bar:after 	{
+        content:'';
+        height:3px; 
+        width:0;
+        bottom:0px; 
+        position:absolute;
+        background:#00629B; 
+        transition:0.2s ease all; 
+    }
+
+    .bar:before {
+        left:50%;
+    }
+
+    .bar:after {
+        right:50%; 
+    }
+
+    /* active state */
+    input:focus ~ .bar:before, input:focus ~ .bar:after {
+        width:50%;
+    }
+}
+
+
+
+
