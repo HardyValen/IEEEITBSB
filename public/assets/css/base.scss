@@ -239,17 +239,18 @@ p.small-text {
 
 /* form starting stylings ------------------------------- */
 .group { 
-    position:relative; 
+    position:relative;
+    margin-bottom:1.5rem;
+    margin-top:0.75rem;
 
     input {
         padding:7px 11px;
         display:block;
         border:0.5px solid #9a9a9a;
         border-radius: 4px;
-        margin-top:1.5rem;
         font-family: 'Calibri Light', sans-serif;
-
-        @include fluidwidth(20rem, 30rem);
+        width:100%;
+        
         @include fluidfontsize(1.2rem, 1.6rem);
     }
 
@@ -260,15 +261,15 @@ p.small-text {
 
     /* LABEL ======================================= */
     label {
-        color:darken( #dfdfdf, 20%);
+        color:#929292;
         position:absolute;
         pointer-events:none;
         left:15px;
         top:8px;
         transition:0.2s ease all;
-        font-family: 'Formata Light', sans-serif;
+        font-family: 'Formata', sans-serif;
 
-        @include fluidfontsize(1.2rem, 1.6rem);
+        @include fluidfontsize(1.2rem, 1.4rem);
     }
 
     /* active state */ //input:valid ~ label
@@ -286,8 +287,7 @@ p.small-text {
     .bar 	{
         position:relative; 
         display:block; 
-        
-        @include fluidwidth(20rem, 30rem);
+        width: 100%;
     }
 
     .bar:before, .bar:after 	{
@@ -313,7 +313,3 @@ p.small-text {
         width:50%;
     }
 }
-
-
-
-

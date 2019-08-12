@@ -32,6 +32,7 @@ class RegistController extends Controller
             $user->password = $password;
             $user->save();
             $request->session()->put(['email_user'=> $email]);
+
             /* Create a new PHPMailer object. Passing TRUE to the constructor enables exceptions. */
             $mail = new PHPMailer;
             $mail->isSMTP();                            // Set mailer to use SMTP
@@ -112,7 +113,7 @@ class RegistController extends Controller
                 return view('error');
                 // return $genpass;
             }
-        }else{
+        } else {
             return view('forget');
         }
     }
@@ -150,21 +151,21 @@ class RegistController extends Controller
 
             $user = User::create($input);
             $request->session()->put(['email_user'=> $input['email']]);
-            /* Create a new PHPMailer object. Passing TRUE to the constructor enables exceptions. */
-            $mail = new PHPMailer;
-            $mail->isSMTP();                            // Set mailer to use SMTP
-            $mail->Host = '	mail.ieee-itb-sb.com';      // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true;                     // Enable SMTP authentication
-            $mail->Username = 'admin@ieee-itb-sb.com';  // SMTP username
-            $mail->Password = 'sandrosbITB';            // SMTP password
-            $mail->SMTPSecure = 'ssl';                  // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 465;  
-            $mail->setFrom('admin@ieee-itb-sb.com', 'IEEE ITB Student Branch');
-            $mail->addReplyTo('admin@ieee-itb-sb.com', 'IEEE ITB Student Branch');
-            $mail->addAddress($input['email']);         // Add a recipient
-            $mail->addCC('admin@ieee-itb-sb.com');
-            $mail->addBCC('admin@ieee-itb-sb.com');
-            $mail->isHTML(true);                        // Set email format to HTML
+                /* Create a new PHPMailer object. Passing TRUE to the constructor enables exceptions. */
+                $mail = new PHPMailer;
+                $mail->isSMTP();                            // Set mailer to use SMTP
+                $mail->Host = '	mail.ieee-itb-sb.com';      // Specify main and backup SMTP servers
+                $mail->SMTPAuth = true;                     // Enable SMTP authentication
+                $mail->Username = 'admin@ieee-itb-sb.com';  // SMTP username
+                $mail->Password = 'sandrosbITB';            // SMTP password
+                $mail->SMTPSecure = 'ssl';                  // Enable TLS encryption, `ssl` also accepted
+                $mail->Port = 465;  
+                $mail->setFrom('admin@ieee-itb-sb.com', 'IEEE ITB Student Branch');
+                $mail->addReplyTo('admin@ieee-itb-sb.com', 'IEEE ITB Student Branch');
+                $mail->addAddress($input['email']);         // Add a recipient
+                $mail->addCC('admin@ieee-itb-sb.com');
+                $mail->addBCC('admin@ieee-itb-sb.com');
+                $mail->isHTML(true);                        // Set email format to HTML
             
             $nama = $input['name'];
             $email = $input['email'];
@@ -211,10 +212,10 @@ class RegistController extends Controller
                     </p>
 
                     <p>
-                        Team Leader Name: ". $nama ." <br>"
-                        ."Institution: ". $afiliasi ." <br>
-                        Email: ". $email ." <br>
-                        Password: ". $genpass ." <br>
+                        Team Leader Name: ".$nama."<br>"
+                        ."Afilliation: ".$afiliasi."<br>
+                        Email: ".$email." <br>
+                        Password: ".$genpass."<br>
                     </p>
                     </div>
 
@@ -235,6 +236,7 @@ class RegistController extends Controller
             
             $mail->Subject = 'IEEE ITB SB Account';
             $mail->Body    = $bodyContent;
+
             if($mail->send()){
                 return redirect('/success');  
             } else {

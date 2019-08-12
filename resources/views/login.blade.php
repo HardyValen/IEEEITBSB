@@ -22,24 +22,40 @@
                     @csrf
 
                         <div class="registration-content__body-mandatory">
-                            <div class="group" data-validate="Username is required">
-                                <input type="email" id="email" name="email" placeholder=' ' autocomplete="username" required />
-                                <span class="bar"></span>
-                                <label>Email</label>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="group" data-validate="Username is required">
+                                        <input type="email" id="email" name="email" placeholder=' ' autocomplete="username" required />
+                                        <span class="bar"></span>
+                                        <label>Email</label>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="group" data-validate="Password is required">
-                                <input type="password" id="password" name="password" placeholder=' ' autocomplete="current-password" required />
-                                <span class="bar"></span>
-                                <label>Password</label>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="group" data-validate="Password is required">
+                                        <input type="password" id="password" name="password" placeholder=' ' autocomplete="current-password" required />
+                                        <span class="bar"></span>
+                                        <label>Password</label>
+                                        <p><a href="/forget">Forgot your password?</a></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
-                        <a href="/forget">Forget Password?</a>
-
-                        <div class="form-submit">
-                            <input type="submit" name="submit" id="submit" class="submit" value="Sign In" />
-                        </div>  
+                        <div class="registration-content__body-mandatory">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a class='optional-button' href="register">Register</a>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end">
+                                    <div class="form-submit">
+                                        <input type="submit" name="submit" id="submit" class="primary-button" value="Sign In" />
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

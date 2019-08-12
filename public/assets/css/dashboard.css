@@ -6,6 +6,7 @@
  *
  *  TOC:
  *      # Sidebar
+ *      # Widget Container
  *      # Dashboard Container
  *      # Team info
  *      # Footer
@@ -21,6 +22,7 @@
  *  -- 4. Font-Size
  *  -- 5. Letter-Spacing  
  *  -- 6. Responsive Border
+ *  -- 7. Responsive Padding Inline Start
  */
 /* -- 01. Mixin untuk fluid width -- */
 /* -- 02. Mixin untuk fluid padding -- */
@@ -28,6 +30,7 @@
 /* -- 05. Mixin untuk fluid font size -- */
 /* -- 06. Mixin untuk fluid letter spacing -- */
 /* -- 07. Mixin untuk Responsive Border (Satu Sisi) -- */
+/* -- 08. Mixin untuk Padding-Inline-Start -- */
 .animate-down-infinite {
   -webkit-animation: animate-down-infinite 3s infinite;
           animation: animate-down-infinite 3s infinite;
@@ -127,6 +130,266 @@
 }
 
 /* ===================================================================
+ * # Widget Container
+ * ------------------------------------------------------------------- */
+.container-widgets {
+  border-radius: 8px;
+}
+
+.container-widgets {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets {
+    margin-bottom: calc(1rem + 1 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(1rem + 1 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.container-widgets .container-widgets__header {
+  color: white !important;
+  background-color: #002855;
+  padding-top: 0.75rem;
+  padding-bottom: 0.1rem;
+  border: 1px solid #002855;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.container-widgets .container-widgets__header {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__header {
+    padding-left: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.container-widgets .container-widgets__header h2 {
+  color: white !important;
+}
+
+.container-widgets .container-widgets__header h2 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__header h2 {
+    font-size: calc(1.25rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.container-widgets .container-widgets__body {
+  background-color: #EBF1F7;
+  border: 1px solid #EBF1F7;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.container-widgets .container-widgets__body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body {
+    padding-left: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.container-widgets .container-widgets__body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body {
+    padding-bottom: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.container-widgets .container-widgets__body .group {
+  /* LABEL ======================================= */
+  /* active state */
+}
+
+.container-widgets .container-widgets__body .group input:focus, .container-widgets .container-widgets__body .group input:not(:placeholder-shown) {
+  background-color: #EBF1F7;
+}
+
+.container-widgets .container-widgets__body .group input:focus ~ label, .container-widgets .container-widgets__body .group input:not(:placeholder-shown) ~ label {
+  background-color: #EBF1F7;
+}
+
+.container-widgets .container-widgets__body .widget-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-widgets .container-widgets__body .widget-icon a {
+  display: inline-block;
+  text-align: center;
+  color: #00629B;
+  width: 100%;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.container-widgets .container-widgets__body .widget-icon a img {
+  width: 2.75rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body .widget-icon a img {
+    width: calc(2.75rem + 2.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body .widget-icon a img {
+    width: 5rem;
+  }
+}
+
+.container-widgets .container-widgets__body .widget-icon a img {
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body .widget-icon a img {
+    margin-bottom: calc(0.375rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(0.375rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body .widget-icon a img {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.container-widgets .container-widgets__body .widget-icon a p {
+  font-weight: 700;
+  color: #00629B;
+}
+
+.container-widgets .container-widgets__body .widget-icon a p {
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body .widget-icon a p {
+    font-size: calc(0.75rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body .widget-icon a p {
+    font-size: 0.875rem;
+  }
+}
+
+.container-widgets .container-widgets__body .widget-icon a:hover {
+  background-color: #D3E3EE;
+}
+
+.container-widgets .container-widgets__body .active {
+  background-color: #D3E3EE;
+}
+
+.container-widgets .container-widgets__body hr {
+  border: 1px solid #00629B;
+}
+
+.container-widgets .container-widgets__body hr {
+  width: 8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body hr {
+    width: calc(8rem + 4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body hr {
+    width: 12rem;
+  }
+}
+
+.container-widgets .container-widgets__body h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-widgets .container-widgets__body h1 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .container-widgets .container-widgets__body h1 {
+    font-size: calc(2rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container-widgets .container-widgets__body h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================================================================
  * # Dashboard Container
  * ------------------------------------------------------------------- */
 .dashboard-container {
@@ -135,21 +398,21 @@
 }
 
 .dashboard-container {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media screen and (min-width: 320px) {
   .dashboard-container {
-    padding-left: calc(1.25rem + 1.25 * ((100vw - 32rem) / (96 - 32)));
-    padding-right: calc(1.25rem + 1.25 * ((100vw - 32rem) / (96 - 32)));
+    padding-left: calc(2rem + 3 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(2rem + 3 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .dashboard-container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -174,6 +437,44 @@
 
 .dashboard-container h1 {
   color: #00629B;
+  font-family: 'Calibri', sans-serif;
+}
+
+.dashboard-container h1 {
+  font-size: 2.25rem;
+}
+
+@media screen and (min-width: 320px) {
+  .dashboard-container h1 {
+    font-size: calc(2.25rem + 0.75 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .dashboard-container h1 {
+    font-size: 3rem;
+  }
+}
+
+.dashboard-container h2 {
+  color: #00629B;
+  font-family: 'Calibri', sans-serif;
+}
+
+.dashboard-container h2 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .dashboard-container h2 {
+    font-size: calc(2rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .dashboard-container h2 {
+    font-size: 2.5rem;
+  }
 }
 
 .dashboard-container .widget-icon {
@@ -186,17 +487,10 @@
 }
 
 .dashboard-container .widget-icon a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: inline-block;
+  text-align: center;
   color: #00629B;
+  width: 100%;
 }
 
 .dashboard-container .widget-icon a img {
@@ -216,32 +510,31 @@
 }
 
 .dashboard-container .widget-icon a img {
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 320px) {
   .dashboard-container .widget-icon a img {
     margin-bottom: calc(0.5rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(0.5rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .dashboard-container .widget-icon a img {
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }
 
 .dashboard-container .widget-icon a p {
-  text-align: center;
-}
-
-.dashboard-container .widget-icon a p {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
 }
 
 @media screen and (min-width: 320px) {
   .dashboard-container .widget-icon a p {
-    font-size: calc(0.625rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(0.75rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
@@ -252,52 +545,347 @@
 }
 
 /* ===================================================================
+ * # Guidebook Container
+ * ------------------------------------------------------------------- */
+.guidebook-container {
+  width: 100%;
+}
+
+.guidebook-container {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container {
+    padding-left: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.guidebook-container {
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container {
+    margin-bottom: calc(0.875rem + 0.625 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(0.875rem + 0.625 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.guidebook-container h1 {
+  color: #00629B;
+  font-family: 'calibri', sans-serif;
+  font-weight: 700;
+}
+
+.guidebook-container h1 {
+  font-size: 1.875rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container h1 {
+    font-size: calc(1.875rem + 0.375 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container h1 {
+    font-size: 2.25rem;
+  }
+}
+
+.guidebook-container h2 {
+  color: #004268;
+  font-family: 'Calibri', sans-serif;
+}
+
+.guidebook-container h2 {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container h2 {
+    font-size: calc(1.5rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.guidebook-container h3 {
+  color: #002235;
+  font-family: 'Calibri', sans-serif;
+}
+
+.guidebook-container h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container h3 {
+    font-size: calc(1.25rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.guidebook-container p, .guidebook-container ol li, .guidebook-container ul li, .guidebook-container .table {
+  color: #181818;
+  font-family: 'calibri', sans-serif;
+}
+
+.guidebook-container p, .guidebook-container ol li, .guidebook-container ul li, .guidebook-container .table {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container p, .guidebook-container ol li, .guidebook-container ul li, .guidebook-container .table {
+    font-size: calc(0.875rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container p, .guidebook-container ol li, .guidebook-container ul li, .guidebook-container .table {
+    font-size: 1rem;
+  }
+}
+
+.guidebook-container ol, .guidebook-container ul {
+  -webkit-padding-start: 1.25rem;
+          padding-inline-start: 1.25rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container ol, .guidebook-container ul {
+    -webkit-padding-start: calc(1.25rem + 0.75 * ((100vw - 320px) / (960 - 320)));
+            padding-inline-start: calc(1.25rem + 0.75 * ((100vw - 320px) / (960 - 320)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container ol, .guidebook-container ul {
+    -webkit-padding-start: 2rem;
+            padding-inline-start: 2rem;
+  }
+}
+
+.guidebook-container .table {
+  color: #363636;
+}
+
+.guidebook-container .table .table-gold {
+  background-color: #ffe366;
+}
+
+.guidebook-container .table .table-silver {
+  background-color: #e8e8e8;
+}
+
+.guidebook-container .table .table-bronze {
+  background-color: #dca570;
+}
+
+.guidebook-container p.quote {
+  color: #787878;
+  font-family: 'Formata Regular', sans-serif;
+}
+
+.guidebook-container p.quote {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container p.quote {
+    font-size: calc(1rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container p.quote {
+    font-size: 1.2rem;
+  }
+}
+
+.guidebook-container a {
+  color: #00629B;
+}
+
+.guidebook-container .table-of-content {
+  border-left: 3px solid #6e111a;
+  background-color: #f9f9f9;
+  width: 50%;
+  padding-left: 1.875rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (max-width: 960px) {
+  .guidebook-container .table-of-content {
+    width: 100%;
+  }
+}
+
+.guidebook-container .table-of-content h1 {
+  color: #00629B;
+  margin-bottom: 1rem;
+}
+
+.guidebook-container .table-of-content h1 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container .table-of-content h1 {
+    font-size: calc(1.25rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container .table-of-content h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.guidebook-container .table-of-content a {
+  color: #0092e8;
+  display: block;
+}
+
+.guidebook-container .table-of-content a {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 320px) {
+  .guidebook-container .table-of-content a {
+    font-size: calc(0.875rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .guidebook-container .table-of-content a {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================================================
  * # Team Info
  * ------------------------------------------------------------------- */
 .teaminfo-container {
+  color: #181818;
   font-family: 'calibri', sans-serif;
 }
 
 .teaminfo-container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 @media screen and (min-width: 320px) {
   .teaminfo-container {
-    padding-left: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
-    padding-right: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-left: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .teaminfo-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
 .teaminfo-container {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 320px) {
   .teaminfo-container {
-    margin-bottom: calc(1.5rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
-    margin-top: calc(1.5rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    margin-bottom: calc(0.5rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(0.5rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .teaminfo-container {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.teaminfo-container h2 {
+  color: #004268;
+  font-family: 'Calibri', sans-serif;
+  margin-bottom: 0;
+}
+
+.teaminfo-container h2 {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .teaminfo-container h2 {
+    font-size: calc(1.5rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .teaminfo-container h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.teaminfo-container h2 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+@media screen and (min-width: 320px) {
+  .teaminfo-container h2 {
+    padding-bottom: calc(0.625rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(0.625rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .teaminfo-container h2 {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
   }
 }
 
 .teaminfo-container a {
   color: #0092e8;
+}
+
+.teaminfo-container p {
+  color: #181818;
 }
 
 .teaminfo-container p {
@@ -336,6 +924,10 @@
   }
 }
 
+.teaminfo-container .table {
+  color: #363636;
+}
+
 .teaminfo-container .teaminfo-member h2 {
   color: #00629B;
   letter-spacing: 1px;
@@ -359,10 +951,6 @@
   }
 }
 
-.teaminfo-container .teaminfo-member .teaminfo-member-info {
-  border-left: 1px solid #dfdfdf;
-}
-
 @media screen and (max-width: 992px) {
   .teaminfo-container .teaminfo-member .teaminfo-member-info {
     margin-top: 1rem;
@@ -371,13 +959,9 @@
   }
 }
 
-.teaminfo-container .teaminfo-submissionstatus {
-  padding: 1rem;
-}
-
-.teaminfo-container .not-verified {
-  border-left: 2px solid #BA0C2F;
-  background-color: #fbb7c3;
+.teaminfo-container .teaminfo-member .teaminfo-member-info b {
+  color: #0072b5;
+  font-size: 105%;
 }
 
 .teaminfo-container .not-verified p {
@@ -385,19 +969,9 @@
   color: #BA0C2F;
 }
 
-.teaminfo-container .submitted {
-  border-left: 2px solid #FFA300;
-  background-color: #ffedcc;
-}
-
 .teaminfo-container .submitted p {
   margin: 0;
-  color: #FFA300;
-}
-
-.teaminfo-container .verified {
-  border-left: 2px solid #00843D;
-  background-color: #51ffa1;
+  color: #cc8200;
 }
 
 .teaminfo-container .verified p {
@@ -581,6 +1155,51 @@ footer .footer-content__policy p {
 @media screen and (min-width: 960px) {
   footer .footer-content__policy p {
     font-size: 0.75rem;
+  }
+}
+
+/* ===================================================================
+ * # Blog Editor Container
+ * ------------------------------------------------------------------- */
+.editor-container {
+  width: 100%;
+}
+
+.editor-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .editor-container {
+    padding-left: calc(2rem + 3 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(2rem + 3 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .editor-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.editor-container {
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+@media screen and (min-width: 320px) {
+  .editor-container {
+    margin-bottom: calc(0.875rem + 0.625 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(0.875rem + 0.625 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .editor-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -848,5 +1467,94 @@ input[type="file" i] {
 
 .upload-button-custom span {
   margin-left: 0.8rem;
+}
+
+/* ===============================
+/* Custom Button
+/* =============================== */
+.primary-button, .optional-button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  border: none;
+}
+
+.primary-button, .optional-button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .primary-button, .optional-button {
+    padding-left: calc(1rem + 0.875 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1rem + 0.875 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .primary-button, .optional-button {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+.primary-button, .optional-button {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 320px) {
+  .primary-button, .optional-button {
+    padding-bottom: calc(0.75rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(0.75rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .primary-button, .optional-button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.primary-button, .optional-button {
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 320px) {
+  .primary-button, .optional-button {
+    font-size: calc(0.75rem + 0.125 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .primary-button, .optional-button {
+    font-size: 0.875rem;
+  }
+}
+
+.primary-button {
+  background-color: #00629B;
+  color: #fff !important;
+}
+
+.optional-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #0092e8 !important;
+}
+
+.primary-button:hover {
+  background-color: #0082ce;
+  color: #e6e6e6 !important;
+}
+
+.optional-button:hover {
+  background-color: #f4f4ff !important;
 }
 /*# sourceMappingURL=dashboard.css.map */

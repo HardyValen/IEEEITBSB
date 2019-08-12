@@ -2,7 +2,7 @@
 @extends('layouts.dashboard')
 
 @section('sidebar')
-    @include('dashboard/subsection/sidebar/sidebar-teaminfo')
+    @include('dashboard/subsection/sidebar/sidebar-landing-normal')
 @endsection
 
 @section('topbar')
@@ -18,6 +18,7 @@
         {{ session()->get('message') }}
     </div>
     @endif
+    
     <form action="addteam" method="POST">
         {{ csrf_field() }}
 

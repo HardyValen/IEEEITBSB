@@ -17,9 +17,9 @@
  *          -- Vision
  *          -- Mission
  *          -- Blog
- *      # Registration
  *      # Blog Page
- *          -- Blog
+ *          -- All Posts
+ *      # Registration
  * =================================================================== */
 /* MIXIN FOR CUSTOM RANGE OF FLUID SIZES
  *  -- Menerima masukan batas bawah font size 'floor' dan batas atas font size 'ceiling', satuan rem!
@@ -32,6 +32,7 @@
  *  -- 4. Font-Size
  *  -- 5. Letter-Spacing  
  *  -- 6. Responsive Border
+ *  -- 7. Responsive Padding Inline Start
  */
 /* -- 01. Mixin untuk fluid width -- */
 /* -- 02. Mixin untuk fluid padding -- */
@@ -39,6 +40,7 @@
 /* -- 05. Mixin untuk fluid font size -- */
 /* -- 06. Mixin untuk fluid letter spacing -- */
 /* -- 07. Mixin untuk Responsive Border (Satu Sisi) -- */
+/* -- 08. Mixin untuk Padding-Inline-Start -- */
 .animate-down-infinite {
   -webkit-animation: animate-down-infinite 3s infinite;
           animation: animate-down-infinite 3s infinite;
@@ -88,6 +90,91 @@
             transform: translate(0, 20px);
     opacity: 0;
   }
+}
+
+.primary-button, .optional-button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  border: none;
+}
+
+.primary-button, .optional-button {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .primary-button, .optional-button {
+    padding-left: calc(1.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .primary-button, .optional-button {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.primary-button, .optional-button {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 320px) {
+  .primary-button, .optional-button {
+    padding-bottom: calc(1.25rem + 0.75 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(1.25rem + 0.75 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .primary-button, .optional-button {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.primary-button, .optional-button {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .primary-button, .optional-button {
+    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .primary-button, .optional-button {
+    font-size: 1.4rem;
+  }
+}
+
+.primary-button {
+  background-color: #00629B;
+  color: #fff;
+}
+
+.optional-button {
+  background-color: #fff;
+  color: #0092e8;
+}
+
+.primary-button:hover {
+  background-color: #0082ce;
+}
+
+.optional-button:hover {
+  background-color: #f4f4ff;
 }
 
 /* ===== */
@@ -604,13 +691,13 @@
 
 @media screen and (min-width: 320px) {
   .hero .hero-content__text h1 {
-    font-size: calc(2rem + 4.104 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(2rem + 2.5 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .hero .hero-content__text h1 {
-    font-size: 6.104rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -675,15 +762,15 @@
 /* -- Recent Post ------------------------------------------------- */
 .landing-post {
   width: 100%;
-  min-height: 60%;
-  padding: 5rem 9rem 5rem 9rem;
+  min-height: 70%;
+  padding: 8rem 15% 8rem 15%;
   color: #545454;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -692,30 +779,38 @@
 
 @media screen and (max-width: 960px) {
   .landing-post {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .landing-post {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
   }
 }
 
 @media screen and (max-width: 960px) and (min-width: 320px) {
   .landing-post {
-    padding-left: calc(2rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
-    padding-right: calc(2rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-left: calc(3.2rem + 6.4 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(3.2rem + 6.4 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (max-width: 960px) and (min-width: 960px) {
   .landing-post {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
+    padding-left: 9.6rem;
+    padding-right: 9.6rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .landing-post {
+    padding: 8rem 3.2rem 8rem 3.2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -760,34 +855,24 @@
 }
 
 .landing-post h1 {
-  font-size: 2.93rem;
+  font-size: 2.4rem;
 }
 
 @media screen and (min-width: 320px) {
   .landing-post h1 {
-    font-size: calc(2.93rem + 0.976 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(2.4rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .landing-post h1 {
-    font-size: 3.906rem;
+    font-size: 2.8rem;
   }
 }
 
 @media screen and (max-width: 960px) {
   .landing-post h1 {
     padding-right: 0;
-  }
-}
-
-.landing-post h1.post-header {
-  text-align: right;
-}
-
-@media screen and (max-width: 960px) {
-  .landing-post h1.post-header {
-    text-align: center;
   }
 }
 
@@ -834,18 +919,18 @@
 }
 
 .landing-post .landing-post__blogcard .blogcard-container .blogcard-header h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 320px) {
   .landing-post .landing-post__blogcard .blogcard-container .blogcard-header h1 {
-    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .landing-post .landing-post__blogcard .blogcard-container .blogcard-header h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -878,68 +963,68 @@
   line-height: 1.3;
 }
 
-.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
+.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1, .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2, .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h3 {
   color: #00629B;
   margin-bottom: 1.3rem;
 }
 
-.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
-  font-size: 1.8rem;
-}
-
-@media screen and (min-width: 320px) {
-  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
-    font-size: calc(1.8rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
-    font-size: 2.4rem;
-  }
-}
-
-.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1::after {
+.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1::after, .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2::after, .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h3::after {
   content: '';
 }
 
-.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
-  margin-bottom: 1.3rem;
-}
-
-.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
-  font-size: 2.344rem;
+.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
+  font-size: 2.734rem;
 }
 
 @media screen and (min-width: 320px) {
-  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
-    font-size: calc(2.344rem + 0.781 * ((100vw - 32rem) / (96 - 32)));
+  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
+    font-size: calc(2.734rem + 0.391 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
-  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
+  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h1 {
     font-size: 3.125rem;
   }
 }
 
+.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
+  margin-bottom: 1.3rem;
+}
+
+.landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
+  font-size: 2.188rem;
+}
+
+@media screen and (min-width: 320px) {
+  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
+    font-size: calc(2.188rem + 0.312 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
 .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h3 {
   margin-bottom: 1.3rem;
 }
 
 .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h3 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 @media screen and (min-width: 320px) {
   .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h3 {
-    font-size: calc(1.875rem + 0.625 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(1.75rem + 0.25 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .landing-post .landing-post__blogcard .blogcard-container .blogcard-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -953,18 +1038,18 @@
 }
 
 .landing-post .landing-post__blogcard .blogcard-container .blogcard-content p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 320px) {
   .landing-post .landing-post__blogcard .blogcard-container .blogcard-content p {
-    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .landing-post .landing-post__blogcard .blogcard-container .blogcard-content p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -1002,24 +1087,24 @@
   }
 }
 
-.landing-competitions h1 {
+.landing-competitions h1, .landing-competitions h3 {
   font-family: 'formata light', sans-serif;
   color: #004268;
 }
 
 .landing-competitions h1 {
-  margin-bottom: 2rem;
+  font-size: 2.93rem;
 }
 
 @media screen and (min-width: 320px) {
   .landing-competitions h1 {
-    margin-bottom: calc(2rem + 1 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(2.93rem + 0.976 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .landing-competitions h1 {
-    margin-bottom: 3rem;
+    font-size: 3.906rem;
   }
 }
 
@@ -1043,26 +1128,51 @@
 }
 
 .landing-competitions h1 {
-  font-size: 2.93rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 320px) {
   .landing-competitions h1 {
-    font-size: calc(2.93rem + 0.976 * ((100vw - 32rem) / (96 - 32)));
+    margin-bottom: calc(2rem + 1 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .landing-competitions h1 {
-    font-size: 3.906rem;
+    margin-bottom: 3rem;
   }
+}
+
+.landing-competitions h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .landing-competitions h3 {
+    font-size: calc(2rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .landing-competitions h3 {
+    font-size: 2.5rem;
+  }
+}
+
+.landing-competitions .landing-competitions__header {
+  text-align: center;
+}
+
+.landing-competitions .landing-competitions__header hr {
+  width: 10%;
+  border-color: #004268;
 }
 
 .landing-competitions .landing-competitions__card {
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -1157,22 +1267,18 @@
   }
 }
 
-@media screen and (max-width: 960px) {
-  .landing-competitions .landing-competitions__card .logo-competitions {
-    display: none;
-  }
-}
-
 /* ===================================================================
  * # Generic Page
  * ------------------------------------------------------------------- */
-/* -- Generic -------------------- */
+/* -- Generic Container -------------------- */
 .generic-container:first-of-type {
   padding-top: 9rem;
+  padding-bottom: 9rem;
 }
 
 @media screen and (min-width: 320px) {
   .generic-container:first-of-type {
+    padding-bottom: calc(9rem + 3 * ((100vw - 32rem) / (96 - 32)));
     padding-top: calc(9rem + 3 * ((100vw - 32rem) / (96 - 32)));
   }
 }
@@ -1180,6 +1286,7 @@
 @media screen and (min-width: 960px) {
   .generic-container:first-of-type {
     padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 }
 
@@ -1250,84 +1357,45 @@
 }
 
 .generic-container .generic-content__text h1 {
-  font-family: 'Calibri Light', sans-serif;
-  color: #00629B;
+  font-family: 'Calibri', sans-serif;
+  color: #002855;
   margin-bottom: 3.0rem;
 }
 
 .generic-container .generic-content__text h1 {
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 
 @media screen and (min-width: 320px) {
   .generic-container .generic-content__text h1 {
-    font-size: calc(3rem + 3.104 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(3.6rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .generic-container .generic-content__text h1 {
-    font-size: 6.104rem;
-  }
-}
-
-.generic-container .generic-content__text h1::after {
-  content: '';
-}
-
-@media screen and (min-width: 960px) {
-  .generic-container .generic-content__text h1::after {
-    content: ' —';
+    font-size: 4.2rem;
   }
 }
 
 .generic-container .generic-content__text h2 {
-  font-family: 'Formata Regular', sans-serif;
+  font-family: 'Calibri', sans-serif;
   color: #0082ce;
 }
 
 .generic-container .generic-content__text h2 {
-  letter-spacing: 1px;
-  padding-left: 1px;
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 320px) {
   .generic-container .generic-content__text h2 {
-    letter-spacing: calc(1px + 1 * ((100vw - 320px) / (960 - 320)));
-    padding-left: calc(1px + 1 * ((100vw - 320px) / (960 - 320)));
+    font-size: calc(1.8rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .generic-container .generic-content__text h2 {
-    letter-spacing: 2px;
-    padding-left: 2px;
-  }
-}
-
-.generic-container .generic-content__text h2 {
-  font-size: 1.6rem;
-}
-
-@media screen and (min-width: 320px) {
-  .generic-container .generic-content__text h2 {
-    font-size: calc(1.6rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .generic-container .generic-content__text h2 {
-    font-size: 2rem;
-  }
-}
-
-.generic-container .generic-content__text h2::before {
-  content: '';
-}
-
-@media screen and (min-width: 960px) {
-  .generic-container .generic-content__text h2::before {
-    content: '— ';
+    font-size: 2.4rem;
   }
 }
 
@@ -1349,22 +1417,6 @@
 @media screen and (min-width: 960px) {
   .generic-container .generic-content__text p {
     font-size: 2rem;
-  }
-}
-
-.generic-container .generic-content__text p {
-  margin-left: 0rem;
-}
-
-@media screen and (min-width: 320px) {
-  .generic-container .generic-content__text p {
-    margin-left: calc(0rem + 3 * ((100vw - 32rem) / (96 - 32)));
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .generic-container .generic-content__text p {
-    margin-left: 3rem;
   }
 }
 
@@ -1501,6 +1553,33 @@
   margin-bottom: 3.0rem;
 }
 
+.generic-container .generic-content__text .container-sponsor h1 {
+  color: #002855;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.generic-container .generic-content__text .container-sponsor h1 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .container-sponsor h1 {
+    font-size: calc(2.5rem + 0.625 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .container-sponsor h1 {
+    font-size: 3.125rem;
+  }
+}
+
+.generic-container .generic-content__text .container-sponsor hr {
+  width: 10%;
+  border-color: #002855;
+}
+
 .generic-container .generic-content__text .container-sponsor {
   margin-left: 0rem;
   margin-right: 0rem;
@@ -1517,6 +1596,25 @@
   .generic-container .generic-content__text .container-sponsor {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+}
+
+.generic-container .generic-content__text .container-sponsor {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .container-sponsor {
+    margin-bottom: calc(1rem + 2 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(1rem + 2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .container-sponsor {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -1614,6 +1712,318 @@
 @media screen and (min-width: 960px) {
   .generic-container .generic-content__text .blog-container .blog-header p {
     font-size: 1.2rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-header {
+  margin-bottom: 1.5rem;
+}
+
+.generic-container .generic-content__text .generic-header h1 {
+  font-family: 'Formata Regular', sans-serif;
+  margin-bottom: 0rem;
+}
+
+.generic-container .generic-content__text .generic-header h1 {
+  font-size: 2.8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-header h1 {
+    font-size: calc(2.8rem + 1.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-header h1 {
+    font-size: 4.2rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body {
+    margin-bottom: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(1rem + 0.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body h1 {
+  font-family: 'Formata Regular', sans-serif;
+  color: #00629B;
+  margin-bottom: 1.15rem;
+}
+
+.generic-container .generic-content__text .generic-body h1 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body h1 {
+    font-size: calc(2rem + 0.8 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body .media-body h1 {
+  margin-bottom: 0.85rem;
+  letter-spacing: 0;
+  color: #181818;
+}
+
+.generic-container .generic-content__text .generic-body .media-body h1 {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body .media-body h1 {
+    font-size: calc(1.4rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body .media-body h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body .alert {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body .alert {
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body .alert {
+    font-size: 1.6rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body p {
+  line-height: 1.4;
+  font-family: 'Calibri Light', sans-serif;
+}
+
+.generic-container .generic-content__text .generic-body p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body p {
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body p {
+    font-size: 1.6rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body p b {
+  color: #363636;
+}
+
+.generic-container .generic-content__text .generic-body p a {
+  color: #007cc4;
+}
+
+.generic-container .generic-content__text .generic-body .logo-competitions {
+  margin-right: 2rem;
+}
+
+.generic-container .generic-content__text .generic-body .logo-competitions {
+  width: 5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body .logo-competitions {
+    width: calc(5rem + 3 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body .logo-competitions {
+    width: 8rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body p, .generic-container .generic-content__text .generic-body ol li, .generic-container .generic-content__text .generic-body ul li, .generic-container .generic-content__text .generic-body .table {
+  color: #181818;
+  font-family: 'calibri', sans-serif;
+}
+
+.generic-container .generic-content__text .generic-body p, .generic-container .generic-content__text .generic-body ol li, .generic-container .generic-content__text .generic-body ul li, .generic-container .generic-content__text .generic-body .table {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body p, .generic-container .generic-content__text .generic-body ol li, .generic-container .generic-content__text .generic-body ul li, .generic-container .generic-content__text .generic-body .table {
+    font-size: calc(1.2rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body p, .generic-container .generic-content__text .generic-body ol li, .generic-container .generic-content__text .generic-body ul li, .generic-container .generic-content__text .generic-body .table {
+    font-size: 1.6rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body ol, .generic-container .generic-content__text .generic-body ul {
+  -webkit-padding-start: 2rem;
+          padding-inline-start: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body ol, .generic-container .generic-content__text .generic-body ul {
+    -webkit-padding-start: calc(2rem + 1.2 * ((100vw - 320px) / (960 - 320)));
+            padding-inline-start: calc(2rem + 1.2 * ((100vw - 320px) / (960 - 320)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body ol, .generic-container .generic-content__text .generic-body ul {
+    -webkit-padding-start: 3.2rem;
+            padding-inline-start: 3.2rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body ol, .generic-container .generic-content__text .generic-body ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body ol, .generic-container .generic-content__text .generic-body ul {
+    margin-bottom: calc(0rem + 0 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(0rem + 0 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body ol, .generic-container .generic-content__text .generic-body ul {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body .table {
+  color: #363636;
+}
+
+.generic-container .generic-content__text .generic-body .table .table-gold {
+  background-color: #ffe366;
+}
+
+.generic-container .generic-content__text .generic-body .table .table-silver {
+  background-color: #e8e8e8;
+}
+
+.generic-container .generic-content__text .generic-body .table .table-bronze {
+  background-color: #dca570;
+}
+
+.generic-container .generic-content__text .generic-body p.quote {
+  color: #787878;
+  font-family: 'Formata Regular', sans-serif;
+}
+
+.generic-container .generic-content__text .generic-body p.quote {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body p.quote {
+    font-size: calc(1.6rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body p.quote {
+    font-size: 2rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body a {
+  color: #00629B;
+}
+
+.generic-container .generic-content__text .generic-body .table-of-content {
+  border-left: 3px solid #6e111a;
+  background-color: #f9f9f9;
+  width: 50%;
+  padding-left: 2.5rem;
+  padding-top: 2.0rem;
+  padding-bottom: 2.0rem;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (max-width: 960px) {
+  .generic-container .generic-content__text .generic-body .table-of-content {
+    width: 100%;
+  }
+}
+
+.generic-container .generic-content__text .generic-body .table-of-content h1 {
+  color: #00629B;
+  margin-bottom: 1.6rem;
+}
+
+.generic-container .generic-content__text .generic-body .table-of-content h1 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body .table-of-content h1 {
+    font-size: calc(2rem + 0.8 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body .table-of-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.generic-container .generic-content__text .generic-body .table-of-content a {
+  color: #0092e8;
+  display: block;
+}
+
+.generic-container .generic-content__text .generic-body .table-of-content a {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .generic-container .generic-content__text .generic-body .table-of-content a {
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .generic-container .generic-content__text .generic-body .table-of-content a {
+    font-size: 1.6rem;
   }
 }
 
@@ -1955,6 +2365,766 @@
 }
 
 /* ===================================================================
+ * # Blog Page
+ * ------------------------------------------------------------------- */
+.newsboard-container-header {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9));
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  min-height: 45%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #edf8ff;
+}
+
+@media screen and (max-width: 960px) {
+  .newsboard-container-header {
+    min-height: 30%;
+  }
+  .newsboard-container-header {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+  .newsboard-container-header {
+    padding-left: calc(3.2rem + -3.2 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(3.2rem + -3.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 960px) {
+  .newsboard-container-header {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .newsboard-container-header {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+  .newsboard-container-header {
+    padding-bottom: calc(3.2rem + -3.2 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(3.2rem + -3.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 960px) {
+  .newsboard-container-header {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
+
+.newsboard-container-header a {
+  text-decoration: none;
+}
+
+.newsboard-container-header .newsboard-header {
+  text-align: center;
+}
+
+.newsboard-container-header .newsboard-header img {
+  width: 9.6rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-header .newsboard-header img {
+    width: calc(9.6rem + 4.8 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-header .newsboard-header img {
+    width: 14.4rem;
+  }
+}
+
+.newsboard-container-header .newsboard-header img {
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-header .newsboard-header img {
+    margin-bottom: calc(0.8rem + 0.8 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-header .newsboard-header img {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.newsboard-container-header .newsboard-header h1 {
+  color: #00629B;
+  letter-spacing: 1px;
+}
+
+.newsboard-container-header .newsboard-header h1 {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-header .newsboard-header h1 {
+    font-size: calc(3rem + 1.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-header .newsboard-header h1 {
+    font-size: 4.2rem;
+  }
+}
+
+.newsboard-container-body {
+  background-color: white;
+  min-height: 60%;
+  width: 100%;
+  font-size: 160%;
+  font-family: 'Calibri', sans-serif;
+}
+
+.newsboard-container-body .newsboard-landing-title {
+  text-align: center;
+}
+
+.newsboard-container-body .newsboard-landing-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .newsboard-landing-title {
+    margin-bottom: calc(2rem + 2 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(2rem + 2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .newsboard-landing-title {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.newsboard-container-body .newsboard-landing-title {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .newsboard-landing-title {
+    padding-left: calc(2.4rem + 2.4 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(2.4rem + 2.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .newsboard-landing-title {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+  }
+}
+
+.newsboard-container-body .newsboard-landing-title a {
+  text-decoration: none;
+}
+
+.newsboard-container-body .newsboard-landing-title h1 {
+  font-family: 'formata regular', sans-serif;
+  color: #00629B;
+  letter-spacing: 1px;
+}
+
+.newsboard-container-body .newsboard-landing-title h1 {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .newsboard-landing-title h1 {
+    font-size: calc(3rem + 1.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .newsboard-landing-title h1 {
+    font-size: 4.2rem;
+  }
+}
+
+.newsboard-container-body .newsboard-landing-title p {
+  font-family: 'formata light', sans-serif;
+  color: #727272;
+  letter-spacing: 1px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+}
+
+.newsboard-container-body .newsboard-landing-title p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .newsboard-landing-title p {
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .newsboard-landing-title p {
+    font-size: 1.6rem;
+  }
+}
+
+.newsboard-container-body .newsboard-landing-cards h2 {
+  color: #727272;
+}
+
+.newsboard-container-body .newsboard-landing-cards h2 {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .newsboard-landing-cards h2 {
+    padding-left: calc(2.4rem + 2.4 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(2.4rem + 2.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .newsboard-landing-cards h2 {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+  }
+}
+
+.newsboard-container-body .newsboard-landing-cards h2 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .newsboard-landing-cards h2 {
+    font-size: calc(2rem + 0.8 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .newsboard-landing-cards h2 {
+    font-size: 2.8rem;
+  }
+}
+
+.newsboard-container-body .nav {
+  background-color: #fff1ea;
+}
+
+.newsboard-container-body .nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .nav {
+    padding-left: calc(1rem + 1 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1rem + 1 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.newsboard-container-body .nav a {
+  color: #002855;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.newsboard-container-body .nav a {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .nav a {
+    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .nav a {
+    font-size: 1.4rem;
+  }
+}
+
+.newsboard-container-body .nav li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .nav li {
+    padding-left: calc(1rem + 1 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1rem + 1 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .nav li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.newsboard-container-body .nav .nav-link {
+  padding-bottom: 1rem;
+}
+
+.newsboard-container-body .nav .nav-link:hover {
+  padding-bottom: 0.7rem;
+  border-bottom: 3px solid #002855;
+}
+
+.newsboard-container-body .blog-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.newsboard-container-body .blog-card-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container {
+    padding-bottom: calc(2rem + 2 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(2rem + 2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.newsboard-container-body .blog-card-container .blog-card-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.newsboard-container-body .blog-card-container .blog-card-link {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    margin-left: calc(1.8rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+    margin-right: calc(1.8rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+}
+
+.newsboard-container-body .blog-card-container .blog-card-link {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    padding-left: calc(1.8rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(1.8rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
+
+.newsboard-container-body .blog-card-container .blog-card-link {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    padding-bottom: calc(2rem + -0.4 * ((100vw - 32rem) / (96 - 32)));
+    padding-top: calc(2rem + -0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .newsboard-container-body .blog-card-container .blog-card-link {
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+  }
+}
+
+.newsboard-container-body .blog-card-container .blog-card-link:hover {
+  background-color: #f9fcff;
+  border-radius: 10px;
+}
+
+.newsboard-container-body .blog-card-container .blog-card h1 {
+  color: #363636;
+  font-family: 'Formata Regular', sans-serif;
+  font-weight: 700;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.newsboard-container-body .blog-card-container .blog-card h1 {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container .blog-card h1 {
+    font-size: calc(1.6rem + 0.8 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container .blog-card h1 {
+    font-size: 2.4rem;
+  }
+}
+
+.newsboard-container-body .blog-card-container .blog-card p {
+  color: #727272;
+}
+
+.newsboard-container-body .blog-card-container .blog-card p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container .blog-card p {
+    font-size: calc(1.4rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container .blog-card p {
+    font-size: 1.8rem;
+  }
+}
+
+.newsboard-container-body .blog-card-container .blog-card .blog-card-date {
+  color: #969696;
+  -webkit-margin-after: 0.6rem;
+          margin-block-end: 0.6rem;
+}
+
+.newsboard-container-body .blog-card-container .blog-card .blog-card-date {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .blog-card-container .blog-card .blog-card-date {
+    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .blog-card-container .blog-card .blog-card-date {
+    font-size: 1.4rem;
+  }
+}
+
+.newsboard-container-body .article-header {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-header {
+    margin-bottom: calc(3rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+    margin-top: calc(3rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-header {
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .newsboard-container-body .article-header {
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+  .newsboard-container-body .article-header {
+    margin-left: calc(1.8rem + 1.2 * ((100vw - 32rem) / (96 - 32)));
+    margin-right: calc(1.8rem + 1.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 960px) {
+  .newsboard-container-body .article-header {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.newsboard-container-body .article-header h1 {
+  color: #363636;
+  font-family: 'Formata Regular', sans-serif;
+  font-weight: 700;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.newsboard-container-body .article-header h1 {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-header h1 {
+    font-size: calc(2.4rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-header h1 {
+    font-size: 3rem;
+  }
+}
+
+.newsboard-container-body .article-header p {
+  color: #969696;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
+}
+
+.newsboard-container-body .article-header p {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-header p {
+    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-header p {
+    font-size: 1.4rem;
+  }
+}
+
+.newsboard-container-body .article-header .notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .newsboard-container-body .article-header .notes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .newsboard-container-body .article-body {
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+  .newsboard-container-body .article-body {
+    margin-left: calc(1.8rem + 1.2 * ((100vw - 32rem) / (96 - 32)));
+    margin-right: calc(1.8rem + 1.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 960px) {
+  .newsboard-container-body .article-body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.newsboard-container-body .article-body {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-body {
+    margin-bottom: calc(3rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-body {
+    margin-bottom: 3.6rem;
+  }
+}
+
+.newsboard-container-body .article-body h1 {
+  color: #363636;
+  font-family: 'Calibri', sans-serif;
+  font-weight: 700;
+}
+
+.newsboard-container-body .article-body h1 {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-body h1 {
+    font-size: calc(2.4rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-body h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.newsboard-container-body .article-body h2 {
+  color: #363636;
+  font-family: 'Calibri Light', sans-serif;
+  font-weight: 700;
+}
+
+.newsboard-container-body .article-body h2 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-body h2 {
+    font-size: calc(2rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-body h2 {
+    font-size: 2.4rem;
+  }
+}
+
+.newsboard-container-body .article-body h3 {
+  color: #484848;
+  font-family: 'Calibri', sans-serif;
+}
+
+.newsboard-container-body .article-body h3 {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-body h3 {
+    font-size: calc(1.8rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-body h3 {
+    font-size: 2rem;
+  }
+}
+
+.newsboard-container-body .article-body p {
+  color: #545454;
+  font-family: 'Calibri', sans-serif;
+}
+
+.newsboard-container-body .article-body p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 320px) {
+  .newsboard-container-body .article-body p {
+    font-size: calc(1.4rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newsboard-container-body .article-body p {
+    font-size: 1.6rem;
+  }
+}
+
+.newsboard-container-body .article-navigation {
+  background-color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .newsboard-container-body .article-navigation {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    z-index: 100;
+    -webkit-box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.35), 0px 18px 14px rgba(0, 0, 0, 0.22);
+            box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.35), 0px 18px 14px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* ===================================================================
  * # Registration Page
  * ------------------------------------------------------------------- */
 .registration-container {
@@ -2024,7 +3194,7 @@
 
 .registration-container .registration-content .registration-content__header {
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #00629B;
   width: 100%;
 }
@@ -2048,6 +3218,26 @@
 .registration-container .registration-content .registration-content__body {
   padding-top: 1rem;
   padding-bottom: 2rem;
+  width: 100%;
+}
+
+.registration-container .registration-content .registration-content__body {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .registration-container .registration-content .registration-content__body {
+    padding-left: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+    padding-right: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .registration-container .registration-content .registration-content__body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .registration-container .registration-content .registration-content__body h1 {
@@ -2057,34 +3247,18 @@
 }
 
 .registration-container .registration-content .registration-content__body h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 
 @media screen and (min-width: 320px) {
   .registration-container .registration-content .registration-content__body h1 {
-    font-size: calc(2.8rem + 0.8 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(2.6rem + 0.6 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .registration-container .registration-content .registration-content__body h1 {
-    font-size: 3.6rem;
-  }
-}
-
-.registration-container .registration-content .registration-content__body {
-  padding-left: 0.5rem;
-}
-
-@media screen and (min-width: 320px) {
-  .registration-container .registration-content .registration-content__body {
-    padding-left: calc(0.5rem + 1.5 * ((100vw - 32rem) / (96 - 32)));
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .registration-container .registration-content .registration-content__body {
-    padding-left: 2rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -2140,24 +3314,24 @@
 }
 
 .registration-container .registration-content .registration-content__body .group p {
-  font-family: 'Calibri Light', sans-serif;
+  font-family: 'Calibri', sans-serif;
   margin-left: 1.5rem;
-  color: #797979;
+  color: #363636;
 }
 
 .registration-container .registration-content .registration-content__body .group p {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 @media screen and (min-width: 320px) {
   .registration-container .registration-content .registration-content__body .group p {
-    font-size: calc(1rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(1.1rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .registration-container .registration-content .registration-content__body .group p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -2166,37 +3340,34 @@
 }
 
 .registration-container .registration-content .registration-content__body .registration-content__body-mandatory, .registration-container .registration-content .registration-content__body .registration-content__body-optional {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.registration-container .registration-content .registration-content__body .submit {
-  padding: 1rem 2rem;
-  font-family: 'formata ', sans-serif;
-  color: #fff;
-  background-color: #00629B;
-  border: 0;
-}
-
-.registration-container .registration-content .registration-content__body .submit {
-  font-size: 1.2rem;
-}
-
-@media screen and (min-width: 320px) {
-  .registration-container .registration-content .registration-content__body .submit {
-    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
-  }
+.registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 @media screen and (min-width: 960px) {
-  .registration-container .registration-content .registration-content__body .submit {
-    font-size: 1.4rem;
+  .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 }
 
-/* ===================================================================
- * # Blog Page
- * ------------------------------------------------------------------- */
+.registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-auto {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media screen and (min-width: 960px) {
+  .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-lg-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-md-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-sm-auto, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-1, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-10, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-11, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-12, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-2, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-3, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-4, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-5, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-6, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-7, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-8, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-9, .registration-container .registration-content .registration-content__body .registration-content__body-mandatory .row .col-xl-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-lg-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-md-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-sm-auto, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-1, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-10, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-11, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-12, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-2, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-3, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-4, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-5, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-6, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-7, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-8, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-9, .registration-container .registration-content .registration-content__body .registration-content__body-optional .row .col-xl-auto {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+
 /* ===================================================================
  * # Footer
  * ------------------------------------------------------------------- */

@@ -20,15 +20,14 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->tinyInteger('id_lomba');
+            $table->rememberToken()->nullable;
             $table->string('afiliasi');
-            $table->string('nama_anggota1')->nullable();
-            $table->string('nim_anggota1')->nullable();
-            $table->string('nama_anggota2')->nullable();
-            $table->string('nim_anggota2')->nullable();
-            $table->tinyInteger('is_verified')->default('0');
-            $table->tinyInteger('is_admin')->default('0');
+            $table->string('phoneNumber');
+            $table->string('lineID');
+            $table->tinyInteger('isAdmin')->default(0);
+            $table->tinyInteger('isCaseStudy')->default(0);
+            $table->tinyInteger('isInvest')->default(0);
+            $table->tinyInteger('isShortMovie')->default(0);
             $table->timestamps();
         });
     }

@@ -12,6 +12,19 @@ class TransactionController extends Controller
         return view('transaction.form')->with('id',$id);
     }
 
+    public function editProfile(Request $request){
+        $user = User::find(Auth::user()->id);
+
+        $user->name = $request->name;
+        $user->nim = $request->nim;
+        $user->afiliasi = $request->afiliasi;
+        $user->phoneNumber = $request->phoneNumber;
+        $user->lineID = $request->lineID;
+        $user->save();
+
+        return redirect()->to('/user-profile')->with('message', 'Your user profile data has been changed successfully!');
+    }
+
     public function essay(){
         return view('transaction.essay');
     }
@@ -24,8 +37,8 @@ class TransactionController extends Controller
         $user = User::find(Auth::user()->id);
         // End of Tambahan dari Hardy, Deklarasi Variabel
 
-        if(($file1->getClientOriginalExtension()=="png" || $file1->getClientOriginalExtension()=="jpg")
-        && ($file2->getClientOriginalExtension()=="png" || $file2->getClientOriginalExtension()=="jpg")) {
+        if(($file1->getClientOriginalExtension()=="png" || $file1->getClientOriginalExtension()=="jpg" || $file1->getClientOriginalExtension()=="PNG" || $file1->getClientOriginalExtension()=="JPG")
+        && ($file2->getClientOriginalExtension()=="png" || $file2->getClientOriginalExtension()=="jpg" || $file2->getClientOriginalExtension()=="PNG" || $file2->getClientOriginalExtension()=="JPG")) {
             $filename1 = Auth::user()->email .  '_photo_'.$request->anggota.'.' . $file1->getClientOriginalExtension();
             $filename2 = Auth::user()->email .  '_ktm_'.$request->anggota.'.' . $file2->getClientOriginalExtension();
             

@@ -432,6 +432,7 @@
  *  -- 4. Font-Size
  *  -- 5. Letter-Spacing  
  *  -- 6. Responsive Border
+ *  -- 7. Responsive Padding Inline Start
  */
 /* -- 01. Mixin untuk fluid width -- */
 /* -- 02. Mixin untuk fluid padding -- */
@@ -439,6 +440,7 @@
 /* -- 05. Mixin untuk fluid font size -- */
 /* -- 06. Mixin untuk fluid letter spacing -- */
 /* -- 07. Mixin untuk Responsive Border (Satu Sisi) -- */
+/* -- 08. Mixin untuk Padding-Inline-Start -- */
 /* ===================================================================
  * # Custom Normalize
  * ------------------------------------------------------------------- */
@@ -645,6 +647,8 @@ p.small-text {
 /* form starting stylings ------------------------------- */
 .group {
   position: relative;
+  margin-bottom: 1.5rem;
+  margin-top: 0.75rem;
   /* LABEL ======================================= */
   /* active state */
   /* BOTTOM BARS ================================= */
@@ -656,24 +660,8 @@ p.small-text {
   display: block;
   border: 0.5px solid #9a9a9a;
   border-radius: 4px;
-  margin-top: 1.5rem;
   font-family: 'Calibri Light', sans-serif;
-}
-
-.group input {
-  width: 20rem;
-}
-
-@media screen and (min-width: 320px) {
-  .group input {
-    width: calc(20rem + 10 * ((100vw - 32rem) / (96 - 32)));
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .group input {
-    width: 30rem;
-  }
+  width: 100%;
 }
 
 .group input {
@@ -698,14 +686,14 @@ p.small-text {
 }
 
 .group label {
-  color: #acacac;
+  color: #929292;
   position: absolute;
   pointer-events: none;
   left: 15px;
   top: 8px;
   -webkit-transition: 0.2s ease all;
   transition: 0.2s ease all;
-  font-family: 'Formata Light', sans-serif;
+  font-family: 'Formata', sans-serif;
 }
 
 .group label {
@@ -714,13 +702,13 @@ p.small-text {
 
 @media screen and (min-width: 320px) {
   .group label {
-    font-size: calc(1.2rem + 0.4 * ((100vw - 32rem) / (96 - 32)));
+    font-size: calc(1.2rem + 0.2 * ((100vw - 32rem) / (96 - 32)));
   }
 }
 
 @media screen and (min-width: 960px) {
   .group label {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -751,22 +739,7 @@ p.small-text {
 .group .bar {
   position: relative;
   display: block;
-}
-
-.group .bar {
-  width: 20rem;
-}
-
-@media screen and (min-width: 320px) {
-  .group .bar {
-    width: calc(20rem + 10 * ((100vw - 32rem) / (96 - 32)));
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .group .bar {
-    width: 30rem;
-  }
+  width: 100%;
 }
 
 .group .bar:before, .group .bar:after {

@@ -16,9 +16,9 @@
  *          -- Vision
  *          -- Mission
  *          -- Blog
- *      # Registration
  *      # Blog Page
- *          -- Blog
+ *          -- All Posts
+ *      # Registration
  * =================================================================== */
 
  @import 'module/math';
@@ -26,6 +26,8 @@
  @import 'module/animate';
  @import 'module/typhography';
  @import 'module/elevation-shadow';
+ @import 'module/button';
+ 
  
 /* ===== */
 /* Mixin */
@@ -319,7 +321,7 @@ $breakpoints: (
 
             h1 {
                 font-family: 'Calibri Light', sans-serif;
-                @include fluidfontsize(2rem, 6.104rem);
+                @include fluidfontsize(2rem, 4.5rem);
                 @include fluidletterspacing(1px, 2px);
                 text-shadow: 0 1px 2px rgba(50,50,50,1);
             }
@@ -336,18 +338,20 @@ $breakpoints: (
 
     .landing-post{
         width:100%;
-        min-height:60%;
-        padding:5rem 9rem 5rem 9rem;
+        min-height:70%;
+        padding:8rem 15% 8rem 15%;
         color: #545454;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: row;
-        
 
         @media screen and (max-width:960px) {
-            padding-top:5rem;
-            padding-bottom: 5rem;
-            @include fluidpaddingx(2rem, 3.5rem);
+            @include fluidpaddingx(3.2rem, 9.6rem);
+            flex-direction: column;
+        }
+
+        @media screen and (max-width:320px) {
+            padding:8rem 3.2rem 8rem 3.2rem;
             flex-direction: column;
         }
 
@@ -356,19 +360,10 @@ $breakpoints: (
             color: #181818;
             @include fluidmarginbottom(2rem, 3rem);
             @include fluidletterspacing(1px, 2px);
-            @include fluidfontsize(2.93rem, 3.906rem);
+            @include fluidfontsize(2.4rem, 2.8rem);
 
             @media screen and (max-width:960px) {
                 padding-right: 0;
-            }
-            
-        }
-
-        h1.post-header{
-            text-align: right;
-
-            @media screen and (max-width:960px) {
-                text-align: center;
             }
         }
 
@@ -409,7 +404,7 @@ $breakpoints: (
                         margin-bottom: 0;
                         font-weight: 700;
                         text-transform: uppercase;
-                        @include fluidfontsize(1.2rem, 1.4rem);
+                        @include fluidfontsize(1.4rem, 1.6rem);
                         @include fluidletterspacing(1px, 2px);
                     }
 
@@ -423,23 +418,26 @@ $breakpoints: (
                     font-family:'calibri light', sans-serif;
                     line-height:1.3;
 
-                    h1 {
+                    h1, h2, h3 {
                         color: #00629B; 
-                        @include fluidfontsize(1.8rem, 2.4rem);
-                        margin-bottom:1.3rem;
+                        margin-bottom: 1.3rem;
                     }
 
-                    h1::after {
+                    h1::after, h2::after, h3::after {
                         content: '';
                     }
 
+                    h1 {
+                        @include fluidfontsize(2.734rem, 3.125rem);
+                    }
+
                     h2 {
-                        @include fluidfontsize(2.344rem, 3.125rem);
+                        @include fluidfontsize(2.188rem, 2.5rem);
                         margin-bottom:1.3rem;
                     }
 
                     h3 {
-                        @include fluidfontsize(1.875rem, 2.5rem);
+                        @include fluidfontsize(1.75rem, 2.0rem);
                         margin-bottom:1.3rem;
                     }
 
@@ -448,7 +446,7 @@ $breakpoints: (
                     }
 
                     p {
-                        @include fluidfontsize(1.2rem, 1.4rem);
+                        @include fluidfontsize(1.4rem, 1.6rem);
                         line-height:1.4;
                         font-family: 'Calibri Light', sans-serif;
                     }
@@ -473,20 +471,36 @@ $breakpoints: (
         }
         
 
-        h1 {
+        h1, h3 {
             font-family: 'formata light', sans-serif;
             color: darken(#00629B, 10%);
-            @include fluidmarginbottom(2rem, 3rem);
-            @include fluidletterspacing(1px, 2px);
+        }
+
+        h1{
             @include fluidfontsize(2.93rem, 3.906rem);
+            @include fluidletterspacing(1px, 2px);
+            @include fluidmarginbottom(2rem, 3rem);
+        }
+
+        h3{
+            @include fluidfontsize(2.0rem, 2.5rem);
+        }
+
+        .landing-competitions__header{
+            text-align: center;
+
+            hr {
+                width: 10%;
+                border-color: darken(#00629B, 10%);
+            }
         }
 
         .landing-competitions__card {
             padding-left: 1rem;
             padding-right:1rem;
 
-            padding-top: 0rem;
-            padding-bottom: 0rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
 
             @media screen and (max-width: 992px) {
                 padding-left: 0rem;
@@ -523,10 +537,6 @@ $breakpoints: (
             .logo-competitions {
                 @include fluidmarginright(2rem, 3rem);
                 @include fluidwidth(5rem, 8rem);
-    
-                @media screen and (max-width: 960px) {
-                    display: none;
-                }
             }
         }
     }
@@ -537,10 +547,10 @@ $breakpoints: (
  * # Generic Page
  * ------------------------------------------------------------------- */
 
-    /* -- Generic -------------------- */
+    /* -- Generic Container -------------------- */
     
     .generic-container:first-of-type{
-        @include fluidpaddingtop(9rem, 12rem);
+        @include fluidpaddingy(9rem, 12rem);
     }
 
     .generic-container {
@@ -565,39 +575,22 @@ $breakpoints: (
             width:100%;
 
             h1 {
-                font-family: 'Calibri Light', sans-serif;
-                color: #00629B;
+                font-family: 'Calibri', sans-serif;
+                color: #002855;
                 margin-bottom:3.0rem;
-                @include fluidfontsize(3.0rem, 6.104rem);
+                @include fluidfontsize(3.6rem, 4.2rem);
             }
-
-            h1::after {
-                content: '';
-                @media screen and (min-width: 960px) {
-                    content: ' —';
-                }
-            }
-            
 
             h2 {
-                font-family: 'Formata Regular', sans-serif;
+                font-family: 'Calibri', sans-serif;
                 color: lighten(#00629B, 10%);
-                @include fluidletterspacing(1px, 2px);
-                @include fluidfontsize(1.6rem, 2.0rem);
-            }
-
-            h2::before {
-                content: '';
-                @media screen and (min-width: 960px) {
-                    content: '— ';
-                }
+                @include fluidfontsize(1.8rem, 2.4rem);
             }
             
             p {
                 font-family: 'Calibri Light', sans-serif;
                 margin-bottom: 3.0rem;
                 @include fluidfontsize(1.6rem, 2.0rem);
-                @include fluidmarginleft(0rem, 3.0rem);
             }
 
             ol, ul{
@@ -651,8 +644,20 @@ $breakpoints: (
             }
 
             .container-sponsor {
+                h1 {
+                    @include fluidfontsize(2.5rem, 3.125rem);
+                    color: #002855;
+                    margin-bottom:0.5rem;
+                    text-align: center;
+                }
+
+                hr {
+                    width: 10%;
+                    border-color: #002855;
+                }
                 
                 @include fluidmarginx(0rem, 3.0rem);
+                @include fluidmarginy(1.0rem, 3.0rem);
                 margin-bottom: 3.0rem;
 
                 .img-sponsor-platina {
@@ -693,6 +698,123 @@ $breakpoints: (
                     }
                 }
             }
+
+            .generic-header{
+                margin-bottom: 1.5rem;
+
+                h1{
+                    @include fluidfontsize(2.8rem, 4.2rem);
+                    font-family: 'Formata Regular', sans-serif;
+                    margin-bottom: 0rem;
+                }
+            }
+
+            .generic-body{
+                @include fluidmarginy(1rem, 1.5rem);
+
+                h1{
+                    @include fluidfontsize(2.0rem, 2.8rem);
+                    font-family: 'Formata Regular', sans-serif;
+                    color: #00629B;
+                    margin-bottom: 1.15rem;
+                }
+
+                .media-body {
+                    h1 {
+                        @include fluidfontsize(1.4rem, 1.8rem);
+                        margin-bottom: 0.85rem;
+                        letter-spacing: 0;
+                        color: #181818;
+                    }
+                }
+                
+                .alert{
+                    @include fluidfontsize(1.4rem, 1.6rem);
+                }
+
+                p {
+                    @include fluidfontsize(1.4rem, 1.6rem);
+                    line-height:1.4;
+                    font-family: 'Calibri Light', sans-serif;
+                    
+                    b {
+                        color: #363636;
+                    }
+        
+                    a {
+                        color: lighten(#00629B, 8%);
+                    }
+                }
+        
+                .logo-competitions {
+                    margin-right: 2rem;
+                    @include fluidwidth(5rem, 8rem);
+                }
+            
+                p, ol li, ul li, .table{
+                    color:#181818;
+                    font-family: 'calibri', sans-serif;
+                    @include fluidfontsize(1.2rem, 1.6rem);
+                }
+            
+                ol, ul{
+                    @include fluidpaddinginlinestart(2.0rem, 3.2rem);
+                    @include fluidmarginy(0rem, 0rem);
+                }
+            
+                .table{
+                    color:#363636;
+            
+                    .table-gold{
+                        background-color:lighten(#FFD100, 20%);
+                    }
+            
+                    .table-silver{
+                        background-color:lighten(#CECECE, 10%);
+                    }
+            
+                    .table-bronze{
+                        background-color:lighten(#CD7F32, 15%);
+                    }
+                }
+            
+                p.quote{
+                    color: #787878;
+                    font-family: 'Formata Regular', sans-serif;
+                    @include fluidfontsize(1.6rem, 2.0rem);
+                }
+            
+                a{
+                    color: #00629B;
+                }
+            
+                .table-of-content {
+                    border-left: 3px solid #6e111a;
+                    background-color: #f9f9f9;
+                    width:50%;
+                    padding-left:2.5rem;
+                    padding-top:2.0rem;
+                    padding-bottom:2.0rem;
+                
+                    @include shadow(1);
+                
+                    @media screen and (max-width:960px) {
+                        width:100%;
+                    }
+                
+                    h1 {
+                        color: #00629B;
+                        @include fluidfontsize(2.0rem, 2.8rem);
+                        margin-bottom: 1.6rem;
+                    }
+                    a {
+                        color:lighten(#00629B, 15%);
+                        display: block;
+                        @include fluidfontsize(1.4rem, 1.6rem);
+                    }
+                }
+            }
+
         }
     }
 
@@ -790,6 +912,240 @@ $breakpoints: (
     }
 
 /* ===================================================================
+ * # Blog Page
+ * ------------------------------------------------------------------- */
+
+// --- Showing All Posts
+ .newsboard-container-header {
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    min-height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:lighten(#00629B, 66%);
+
+    @media screen and (max-width: 960px){
+        @include fluidpaddingx(3.2rem, 0rem);
+        @include fluidpaddingy(3.2rem, 0rem);
+        min-height: 30%;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    
+    .newsboard-header{
+        text-align: center;
+
+        img{
+            @include fluidwidth(9.6rem, 14.4rem);
+            @include fluidmarginbottom(0.8rem, 1.6rem);
+        }
+
+        h1{
+            color:#00629B;
+            letter-spacing: 1px;
+            @include fluidfontsize(3.0rem, 4.2rem);
+        }
+    }
+}
+
+.newsboard-container-body{
+    background-color:white;
+    min-height: 60%;
+    width: 100%;
+    font-size:160%;
+    font-family: 'Calibri', sans-serif;
+
+    .newsboard-landing-title{
+        text-align: center;
+        @include fluidmarginy(2rem, 4rem);
+        @include fluidpaddingx(2.4rem, 4.8rem);
+
+        a{
+            text-decoration: none;
+        }
+
+        h1{
+            font-family: 'formata regular', sans-serif;
+            color:#00629B;
+            letter-spacing: 1px;
+            @include fluidfontsize(3.0rem, 4.2rem);
+        }
+        
+        p{
+            font-family: 'formata light', sans-serif;
+            color: #727272;
+            letter-spacing: 1px;
+            margin-block-end: 0px;
+
+            @include fluidfontsize(1.4rem, 1.6rem);
+        }
+    }
+
+    .newsboard-landing-cards{
+        h2{
+            color: #727272;
+            @include fluidpaddingx(2.4rem, 4.8rem);
+            @include fluidfontsize(2.0rem, 2.8rem);
+        }
+    }
+
+    .nav{
+        background-color:#fff1ea;
+        @include fluidpaddingx(1rem, 2rem);
+
+        a {
+            color:#002855;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            @include fluidfontsize(1.2rem, 1.4rem);
+        }
+        
+        li {
+            @include fluidpaddingx(1rem, 2rem);
+        }
+
+        .nav-link{
+            padding-bottom:1rem;
+        }
+
+        .nav-link:hover {
+            padding-bottom:0.7rem;
+            border-bottom: 3px solid #002855;
+        }
+    }
+
+    .blog-card-container{
+        @include fluidpaddingy(2rem, 4rem);
+        display: flex;
+        flex-direction: column;
+        
+        width:100%;
+
+        .blog-card-link{
+            width:100%;
+            text-decoration: none;
+            
+            @include fluidmarginx(1.8rem, 2.4rem);
+            @include fluidpaddingx(1.8rem, 2.4rem);
+            @include fluidpaddingy(2.0rem, 1.6rem);
+
+            @media screen and (max-width:992px){
+                @include shadow(1);
+                margin-bottom:2rem;
+                border-radius: 1rem;
+            };
+        }
+
+        .blog-card-link:hover{
+            background-color: #f9fcff;
+            border-radius: 10px;
+        }
+
+        .blog-card{
+            h1{
+                color: #363636;
+                font-family: 'Formata Regular', sans-serif;
+                font-weight: 700;
+                @include fluidfontsize(1.6rem, 2.4rem);
+                margin-block-end: 0;
+            }
+
+            p{
+                color: #727272;
+                @include fluidfontsize(1.4rem, 1.8rem);
+            }
+
+            .blog-card-date{
+                @include fluidfontsize(1.2rem, 1.4rem);
+                color: #969696;
+                margin-block-end: 0.6rem;
+            }
+        }
+    }
+
+    .article-header{
+        @include fluidmarginy(3.0rem, 3.6rem);
+        @media screen and (max-width:960px){
+            @include fluidmarginx(1.8rem, 3.0rem);
+        }
+
+        h1{
+            color: #363636;
+            font-family: 'Formata Regular', sans-serif;
+            font-weight: 700;
+            @include fluidfontsize(2.4rem, 3.0rem);
+            margin-block-end: 0;
+        }
+
+        p{
+            @include fluidfontsize(1.2rem, 1.4rem);
+            color: #969696;
+            margin-block-end: 0rem;
+        }
+
+        .notes{
+            display:flex;
+            justify-content: space-between;
+
+            @media screen and(max-width:960px){
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .article-body{
+        @media screen and (max-width:960px){
+            @include fluidmarginx(1.8rem, 3.0rem);
+        }
+
+        @include fluidmarginbottom(3.0rem, 3.6rem);
+        h1{
+            color: #363636;
+            font-family: 'Calibri', sans-serif;
+            font-weight: 700;
+            @include fluidfontsize(2.4rem, 2.8rem);
+        }
+
+        h2{
+            color: #363636;
+            font-family: 'Calibri Light', sans-serif;
+            font-weight: 700;
+            @include fluidfontsize(2.0rem, 2.4rem);
+        }
+
+        h3{
+            color: #484848;
+            font-family: 'Calibri', sans-serif;
+            @include fluidfontsize(1.8rem, 2.0rem);
+        }
+
+        p{
+            color: #545454;
+            font-family: 'Calibri', sans-serif;
+            @include fluidfontsize(1.4rem, 1.6rem);
+        }
+    }
+    
+    .article-navigation{
+        background-color:white;
+
+        @media screen and (max-width:960px){
+            position: fixed;
+            left: 0;
+            bottom: 0px;
+            z-index: 100;
+            @include shadow(24);
+        }
+    }
+}
+
+/* ===================================================================
  * # Registration Page
  * ------------------------------------------------------------------- */
 
@@ -832,7 +1188,7 @@ $breakpoints: (
 
             .registration-content__header{
                 padding-top:1rem;
-                padding-bottom:2rem;
+                padding-bottom:1rem;
                 border-bottom: 1px solid #00629B;
                 width:100%;
 
@@ -845,15 +1201,16 @@ $breakpoints: (
             .registration-content__body{
                 padding-top:1rem;
                 padding-bottom:2rem;
+                width:100%;
+
+                @include fluidpaddingx(0.5rem, 2rem);
 
                 h1 {
                     font-family: 'Calibri Light', sans-serif;
                     color:darken(#00629B, 10%);
                     margin-bottom:1rem;
-                    @include fluidfontsize(2.8rem, 3.6rem);
+                    @include fluidfontsize(2.6rem, 3.2rem);
                 }
-
-                    @include fluidpaddingleft(0.5rem, 2rem);
 
                 h2 {
                     color:lighten(#00629B, 10%);
@@ -878,10 +1235,10 @@ $breakpoints: (
 
                 .group{
                     p {
-                        font-family: 'Calibri Light', sans-serif;
+                        font-family: 'Calibri', sans-serif;
                         margin-left: 1.5rem;
-                        color:darken( #dfdfdf, 40%);
-                        @include fluidfontsize(1.0rem, 1.2rem);
+                        color:#363636;
+                        @include fluidfontsize(1.1rem, 1.3rem);
                     }
 
                     p::after{
@@ -890,27 +1247,33 @@ $breakpoints: (
                 }
 
                 .registration-content__body-mandatory, .registration-content__body-optional{
-                    margin-top: 3rem;
-                    margin-bottom: 3rem;
-                }
+                    margin-top: 2.5rem;
+                    margin-bottom: 2.5rem;
 
-                .submit{
-                    padding:1rem 2rem;
-                    font-family: 'formata ', sans-serif;
-                    @include fluidfontsize(1.2rem, 1.4rem);
-                    color:#fff;
-                    background-color: #00629B;
-                    border:0;
+                    .row {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    
+                        @media screen and (min-width:960px) {
+                            margin-left: 0px !important;
+                            margin-right: 0px !important;
+                        }
+
+                        .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        
+                            @media screen and (min-width:960px) {
+                                padding-left: 0px !important;
+                                padding-right: 0px !important;
+                            }
+                        }
+                    }
                 }
             }
         }
 
     }
-
-/* ===================================================================
- * # Blog Page
- * ------------------------------------------------------------------- */
-
 
 /* ===================================================================
  * # Footer

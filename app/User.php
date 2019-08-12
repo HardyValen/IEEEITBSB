@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'nim', 'email', 'password', 'afiliasi', 'id_lomba', 'nama_anggota1', 'nim_anggota1', 'nama_anggota2', 'nim_anggota2'
+        'name', 'nim', 'email', 'password', 'afiliasi', 'phoneNumber', 'lineID'
     ];
 
     /**
@@ -36,4 +37,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function caseStudy2019Participant()
+    {
+        return $this->hasOne('App\casestudy2019participant', 'user_id');
+    }
+
+    public function invest2019Participant()
+    {
+        return $this->hasOne('App\invest2019participant', 'user_id');
+    }
+
+    public function shortmovie2019Participant()
+    {
+        return $this->hasOne('App\shortmovie2019participant', 'user_id');
+    }
 }
+

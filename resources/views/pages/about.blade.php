@@ -4,7 +4,7 @@
     <section class='generic-container'>
         <div class="generic-content__text">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="offset-lg-2 col-lg-8">
                     <h1>About IEEE ITB SB</h1>
                     <p>
                         IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE will be essential to the global technical community and to technical professionals everywhere, and be universally recognized for the contributions of technology and of technical professionals in improving global conditions. IEEE's core purpose is to foster technological innovation and excellence for the benefit of humanity.<br>
@@ -96,7 +96,7 @@
     <section class='generic-container' id='organogram'>
         <div class="generic-content__text">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="offset-lg-2 col-lg-8">
 
                     <h2>organogram</h2>
                     <img class='generic-poster-image img-fluid rounded' src={{URL::asset('assets/images/ORGANOGRAM-FULL-03-min.png')}}>

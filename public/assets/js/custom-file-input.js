@@ -26,7 +26,7 @@
 
 			if(fileName){
 				
-				if(re.exec(fileName)[1] == "jpg" || re.exec(fileName)[1] =="png" || re.exec(fileName)[1] =="pdf"){	/* Kalo masukinnya file jpg dan png, warna jadi ijo" */ /* Cari cara biar bisa misahin fungsi pdf sama fungsi jpg/png */
+				if(re.exec(fileName)[1] == "jpg" || re.exec(fileName)[1] == "JPG" || re.exec(fileName)[1] =="png" || re.exec(fileName)[1] =="PNG" || re.exec(fileName)[1] =="pdf" || re.exec(fileName)[1] =="PDF"){	/* Kalo masukinnya file jpg dan png, warna jadi ijo" */ /* Cari cara biar bisa misahin fungsi pdf sama fungsi jpg/png */
 					label.querySelector('span').innerHTML = "<i class='fas fa-arrow-alt-circle-up'></i> " + fileName;
 					label.style.backgroundColor = '#CCE0D9';
 					label.style.color = '#00843D';

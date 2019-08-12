@@ -2,7 +2,7 @@
 @extends('layouts.dashboard')
 
 @section('sidebar')
-    @include('dashboard/subsection/sidebar/sidebar-teaminfo')
+    @include('dashboard/subsection/sidebar/sidebar-landing-normal')
 @endsection
 
 @section('topbar')
@@ -19,7 +19,7 @@
                 <h2>Team Leader</h2>
                 <p>
                     Name: {{ Auth::user()->name }}<br>
-                    Student ID Number: {{ Auth::user()->nim }}<br>
+                    Student ID Number: {{ Auth::user()->ID }}<br>
                      
                     Photo:  @if(Auth::user()->isset_photo_anggota0 == 1)
                                 Uploaded | <a href='/confirm/$id'>edit</a>
@@ -99,7 +99,7 @@
         </p>
 
         <p class='teaminfo-institution'>
-            Institution: {{ Auth::user()->afiliasi }}
+            Affiliation: {{ Auth::user()->afiliasi }}
         </p>
 
         @if (Auth::user()->is_verified==0)

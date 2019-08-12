@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">
-        <object class='nav-logo' data="/assets/images/Digital Logo IEEE ITB.svg" type="image/svg+xml"></object>
+    <a class="navbar-brand" href="/">
+        <img class='nav-logo' src="/assets/images/Digital Logo IEEE ITB.svg">
     </a>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,6 +16,9 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item nav-item-style-top">
                 <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item nav-item-style">
+                <a class="nav-link" href="/blog">NEWSBOARD</a>
             </li>
             <li class="nav-item nav-item-style dropdown">
                 <a class="nav-link dropdown-toggle " href="competitions" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,7 +36,7 @@
                 </div>
             </li>
             <li class="nav-item nav-item-style">
-                <a class="nav-link" href="/disaster-hack">HACKATHON COMPETITON</a>
+                <a class="nav-link" href="/fusion2019">FUSION 2019</a>
             </li>
             @if(Auth::user())
             <li class="nav-item nav-item-style nav-loggedin">

@@ -1,21 +1,14 @@
-@section('title', 'Write a Post')
 @extends('layouts.dashboard')
 
-@section('sidebar')
-    @include('dashboard/subsection/sidebar/sidebar-landing-normal')
-@endsection
-
-@section('topbar')
-    @include('dashboard/subsection/topbar/topbar-landing-normal')
-@endsection
+@section('title', 'Page Title')
 
 @section('content')
 @if(Auth::user())
-@if(Auth::user()->is_admin==1)
+@if(Auth::user()->isAdmin==1)
 <form action="/submit" method="POST">
     {{ csrf_field() }}
     <div class="form-group">
-        <label for="input">Title</label>
+        <label for="input">Title</label><br>
         <input type="text" name="title"> <br>
         <label for="input">Summary</label> <br>
         <textarea name="summary" cols="80" rows="5"></textarea> <br>
@@ -35,9 +28,9 @@
 	};
 </script>
 @else
-You are not Admin
+    You are not Admin
 @endif
 @else
-Please login
+    Please login
 @endif
   @endsection

@@ -14,6 +14,7 @@
  *  -- 4. Font-Size
  *  -- 5. Letter-Spacing  
  *  -- 6. Responsive Border
+ *  -- 7. Responsive Padding Inline Start
  */
 
 
@@ -354,5 +355,24 @@
         border-right: $size solid $color;
       }
     }
+  }
+}
+
+/* -- 08. Mixin untuk Padding-Inline-Start -- */
+@mixin fluidpaddinginlinestart($floor, $ceiling) {
+  $u1: unit($floor);
+  $u2: unit($ceiling);
+  
+  @if $u1 == $u2 {
+      & {
+          padding-inline-start: $floor;
+
+          @media screen and (min-width: 320px) {
+            padding-inline-start: calc(#{$floor} + #{strip-unit($ceiling - $floor)} * ((100vw - 320px) / (960 - 320)));
+          }
+          @media screen and (min-width: 960px) {
+            padding-inline-start: $ceiling;
+          }
+      }
   }
 }

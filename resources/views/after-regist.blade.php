@@ -24,7 +24,9 @@
                     The email contains your <b>password</b> and team details. The information should only be disclosed to team members.
                 </p>
 
-                <a href='https://ieee-itb-sb.com/login'>go to login page &rarr;</a>
+                <p>
+                    <a href='/login'>go to login page &rarr;</a>
+                </p>
             </div>
         </div>
     </section>
