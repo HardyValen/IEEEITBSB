@@ -178,18 +178,18 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Open Registration</td>
+                                        <td>Open Registration and Video Submission</td>
                                         <td>July 15<sup>th</sup>, 2019 &mdash; September 7<sup>th</sup>, 2019</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>Video Submission</td>
-                                        <td>September 7<sup>th</sup>, 2019</td>
+                                        <td>Winners Announcement</td>
+                                        <td>September 21<sup>st</sup>, 2019</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td>Grand Seminar and Winners Announcement</td>
-                                        <td>September 21<sup>st</sup>, 2019</td>
+                                        <td>Grand Seminar</td>
+                                        <td>October 12<sup>th</sup>, 2019</td>
                                     </tr>
                                 </tbody>
                             </table>

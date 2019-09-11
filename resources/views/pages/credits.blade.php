@@ -12,11 +12,46 @@
                         <p>This section is dedicated to the companies that support our events.</p>
 
                         <div class="container-sponsor"> <!-- IEEE FUSION -->
-                            <h1>IEEE FUSION 2019</h1>
+                            <h1 class='my-5'>IEEE FUSION 2019</h1>
                             <hr>
-                            <div class="row">
-                                <div class="col-6 col-lg-3">
+                            <div class="row my-4">
+                                <div class="col-12 offset-lg-2 col-lg-8">
                                     <img src='assets/images/Sponsor - Platina/Astra.jpg' class='img-sponsor-platina img-fluid'>
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="offset-2 col-8 offset-lg-3 col-lg-6">
+                                    <img src='assets/images/Sponsor - Platina/northstar.jpg' class='img-sponsor-platina img-fluid'>
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="offset-1 col-10 offset-lg-2 col-lg-8">
+                                    <div class='row'>
+                                        <div class='col-6'>
+                                            <img src='assets/images/Sponsor - Platina/pnp.png' class='img-sponsor-platina img-fluid'>
+                                        </div>
+                                        <div class='col-6'>
+                                            <img src='assets/images/Sponsor - Platina/madurasa.png' class='img-sponsor-platina img-fluid'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="offset-1 col-10">
+                                    <div class='row'>
+                                        <div class='col-3'>
+                                            <img src='assets/images/Sponsor - Platina/pupukKaltim.jpg' class='img-sponsor-platina img-fluid'>
+                                        </div>
+                                        <div class='col-3'>
+                                            <img src='assets/images/Sponsor - Platina/waskita.jpg' class='img-sponsor-platina img-fluid'>
+                                        </div>
+                                        <div class='col-3'>
+                                            <img src='assets/images/Sponsor - Platina/gojek.png' class='img-sponsor-platina img-fluid'>
+                                        </div>
+                                        <div class='col-3'>
+                                            <img src='assets/images/Sponsor - Platina/bca.png' class='img-sponsor-platina img-fluid'>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

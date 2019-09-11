@@ -30,7 +30,7 @@
                         <div class=" col-12 my-4" id='a'>
                             <h2>Description and Purpose</h2>
                             <p>
-                                The Case Study Competition is a brand-new event of IEEE ITB Student Branch. It is an international competition participated by student of various major, mainly electrical and computer science engineering, all around the world. The competition focuses on analysis of a real case related to industries, identification of main problems and proposition of best solution to solve the problem. The competition consists of two main stages, which are preliminary phase (paper selection) and final phase (presentation). 
+                                The Case Study Competition is a brand-new event of IEEE ITB Student Branch. It is an international competition participated by student of various major, mainly electrical and computer science engineering, all around the world. The competition focuses on analysis of a real case related to industries, identification of main problems and proposition of best solution to solve the problem. The competition consists of two main stages, which are preliminary phase (Storyboard selection) and final phase (presentation). 
                             </p>
                             <p>
                                 This competition is made as a platform for students all around the world to apply and sharpen their knowledge and analytical skills. By this competition, IEEE ITB SB are willing to bring out innovative ideas for the future challenge of human life.
@@ -58,7 +58,7 @@
                                     <b>Technical Meeting</b>
                                     <ul>
                                         <li>Venue: Multimedia Room</li>
-                                        <li>Date: Thursday, October 11<sup>st</sup>, 2019</li>
+                                        <li>Date: Thursday, October 10<sup>th</sup>, 2019</li>
                                         <li>Time: 07.30 PM – end (GMT + 7)</li>
                                     </ul>
                                 </li>
@@ -66,7 +66,7 @@
                                     <b>Competition Day (Final)</b>
                                     <ul>
                                         <li>Venue: Bandung Institut Of Technology</li>
-                                        <li>Date: Friday, October 12<sup>nd</sup>, 2019</li>
+                                        <li>Date: Friday, October 11<sup>th</sup>, 2019</li>
                                         <li>Time: 07.30 PM – end (GMT + 7)</li>
                                     </ul>
                                 </li>
@@ -83,10 +83,10 @@
                                 <li>Each participant may only participate in one team.</li>
                                 <li>Each participant may not participate in other competition held by IEEE SB ITB 2019.</li>
                                 <li>Every university may send more than one team.</li>
-                                <li>Each team may only send one paper.</li>
-                                <li>The paper must be related to the case given from IEEE SB ITB.</li>
+                                <li>Each team may only send one Storyboard.</li>
+                                <li>The Storyboard must be related to the case given from IEEE SB ITB.</li>
                                 <li>The submitted work must be new and original.</li>
-                                <li>All submission of paper and final presentation materials should be typed, submitted, and presented in formal English.</li>
+                                <li>All submission of Storyboard and final presentation materials should be typed, submitted, and presented in formal English.</li>
                                 <li>Top 10 teams will be chosen as the finalists and will be invited to Institut Teknologi Bandung, Bandung, West Java, Indonesia to solve the new case that given from the judges to solve.</li>
                                 <li>Each team that have been proceed to IEEE SB ITB STUDY CASE COMPETITION final round must attend the Technical Meeting at October 11<sup>th</sup>, 2019.</li>
                                 <li>There is one case in this competition, first case for preliminary phase and the second case for Final phase. The preliminary case can be accessed at Website IEEE ITB SB.</li>
@@ -157,13 +157,13 @@
                             <h2>Competition Format</h2>
                             <ol>
                                 <li>
-                                    <b>Preliminary Phase (Paper)</b>
+                                    <b>Preliminary Phase (Storyboard)</b>
                                     <ul>
                                         <li>
-                                            Participants will be given a preliminary case at Website that has to be solved in paper format
+                                            Participants will be given a preliminary case at Website that has to be solved in Storyboard format
                                         </li>
                                         <li>
-                                            Full paper submission will be held:
+                                            Full Storyboard submission will be held:
                                             <ul>
                                                 <li>
                                                     July 15<sup>th</sup>, 2019 to August 15<sup>th</sup>, 2019 (First wave)
@@ -174,10 +174,10 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            The submission of Full Paper along with payment receipt must be uploaded before August 15<sup>th</sup>, 2019 at 23.59 (GMT + 7) for first wave and before September 7<sup>th</sup>, 2019 at 23.59 (GMT + 7) for second wave to <a href='/dashboard/case-study/upload-files'>here</a>.
+                                            The submission of Full Storyboard along with payment receipt must be uploaded before August 15<sup>th</sup>, 2019 at 23.59 (GMT + 7) for first wave and before September 7<sup>th</sup>, 2019 at 23.59 (GMT + 7) for second wave to <a href='/dashboard/case-study/upload-files'>here</a>.
                                         </li>
                                         <li>
-                                            Participants then upload the paper to the website using the team account before September 7<sup>th</sup>, 2019 at 23.59 (GMT + 7). Submission of the paper must in .pdf form with file name: IEEEITBSB2019_CaseStudyCompetition_Preliminary_(Team Name).pdf and then submit to our website using team account. After submitting your paper, please verify immediately to our contact person.
+                                            Participants then upload the Storyboard to the website using the team account before September 7<sup>th</sup>, 2019 at 23.59 (GMT + 7). Submission of the Storyboard must in .pdf form with file name: IEEEITBSB2019_CaseStudyCompetition_Preliminary_(Team Name).pdf and then submit to our website using team account. After submitting your Storyboard, please verify immediately to our contact person.
                                         </li>
                                     </ul>
                                 </li>
@@ -191,9 +191,9 @@
                                         <li>
                                             The presentation will be held at Institut Teknologi Bandung, West Java, Indonesia, for 3 days: 
                                             <ul>
-                                                <li>October 11<sup>st</sup>, 2019: Technical meeting</li>
-                                                <li>October 12<sup>nd</sup>, 2019: Presentation and Exhibition</li>
-                                                <li>October 13<sup>rd</sup>, 2019 : Grand Seminar and Winner Announcement.</li>
+                                                <li>October 10<sup>th</sup>, 2019: Technical meeting</li>
+                                                <li>October 11<sup>th</sup>, 2019: Presentation and Exhibition</li>
+                                                <li>October 12<sup>th</sup>, 2019 : Grand Seminar and Winner Announcement.</li>
                                             </ul>
                                             Those teams will present their solution in front of judges at the Final day
                                         </li>
@@ -216,8 +216,8 @@
                             <h2>Structure Format</h2>
                             
                             <p>
-                                <b>Paper Structure</b><br>
-                                The Paper in preliminary phase follow the IEEE Paper Format and Structure can be accessed in our website: http://ieee-itb-sb.com/
+                                <b>Storyboard Structure</b><br>
+                                The Storyboard in preliminary phase follow the IEEE Storyboard Format and Structure can be accessed in our website: http://ieee-itb-sb.com/
                             </p>
                             
                             <p>
@@ -234,11 +234,11 @@
                             
                             <ol>
                                 <li>
-                                    <b>Preliminary (Paper):</b>
+                                    <b>Preliminary (Storyboard):</b>
                                     <ul>
                                         <li>
                                             <b>Originality (40%)</b><br> 
-                                            Originality of contribution to knowledge with an emphasis on the paper’s innovativeness in one or more of; 
+                                            Originality of contribution to knowledge with an emphasis on the Storyboard’s innovativeness in one or more of; 
                                             <ol type='i'>
                                                 <li>theoretical development</li>
                                                 <li>empirical results or,</li>
@@ -258,13 +258,13 @@
                                         <li>
                                             <p>
                                                 <b>Positioning (15%)</b><br>
-                                                Clear positioning of paper in existing international literature with a conclusion(s) that is both convincing and of significant potential 
+                                                Clear positioning of Storyboard in existing international literature with a conclusion(s) that is both convincing and of significant potential 
                                             </p>
                                         </li>
                                         <li>
                                             <p>
                                                 <b>Writing Style (15%)</b><br> 
-                                                Quality of writing style in term of accuracy, clarity, readability, and organization of the paper 
+                                                Quality of writing style in term of accuracy, clarity, readability, and organization of the Storyboard 
                                             </p>
                                         </li>
                                     </ul>
@@ -359,17 +359,17 @@
                                         <tr>
                                             <th scope="row">6</th>
                                             <td>Technical Meeting</td>
-                                            <td>October 11<sup>st</sup>, 2019</td>
+                                            <td>October 10<sup>th</sup>, 2019</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">7</th>
                                             <td>Final Competition</td>
-                                            <td>October 12<sup>nd</sup>, 2019</td>
+                                            <td>October 11<sup>th</sup>, 2019</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">8</th>
                                             <td>Grand Seminar and Winners Announcement</td>
-                                            <td>October 13<sup>rd</sup>, 2019</td>
+                                            <td>October 12<sup>th</sup>, 2019</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -382,7 +382,7 @@
                             <h2>Results</h2>
                             <ol>
                                 <li>
-                                    The result of full paper submission will be announced at IEEE ITB SB website.
+                                    The result of full Storyboard submission will be announced at IEEE ITB SB website.
                                 </li>
                                 <li>
                                     The result of the competition will be announced at the Grand Seminar.
@@ -460,7 +460,7 @@
                                     <a href="{{URL::asset('assets/fusion2019/case-study/guidebook_casestudy.pdf')}}">Guidebook <sup><i class="fas fa-file-download"></i></sup></a>
                                 </li>
                                 <li>
-                                    <a href="{{URL::asset('assets/fusion2019/case-study/formatPreliminary.docx')}}">Essay Format <sup><i class="fas fa-file-download"></i></sup></a>
+                                    <a href="https://bit.ly/StoryboardExp">Storyboard Format <sup><i class="fas fa-link"></i></sup></a>
                                 </li>
                             </ul>
                         </div>

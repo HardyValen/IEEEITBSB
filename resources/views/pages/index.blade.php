@@ -130,7 +130,7 @@ function getMonthNameShort($x){
 
                             <p>
                                 <b>Registration Period | </b> 
-                                June 24<sup>th</sup> 2019 &ndash; August 31<sup>st</sup> 2019
+                                July 15<sup>th</sup> 2019 &ndash; September 7<sup>th</sup> 2019
                                 <br>
                                 <b> [<a href='/register'>Register</a>]
                                     [<a href='/guidebook/short-movie'>Guidebook</a>]</b>
@@ -154,7 +154,7 @@ function getMonthNameShort($x){
 
                             <p>
                                 <b>Registration Period | </b> 
-                                June 24<sup>th</sup> 2019 &ndash; July 22<sup>nd</sup> 2019
+                                July 15<sup>th</sup> 2019 &ndash; September 7<sup>th</sup> 2019
                                 <br>
                                 <b> [<a href='/register'>Register</a>]
                                     [<a href='/guidebook/invest'>Guidebook</a>]</b>
@@ -178,7 +178,7 @@ function getMonthNameShort($x){
 
                             <p>
                                 <b>Registration Period | </b> 
-                                June 24<sup>th</sup> 2019 &ndash; July 22<sup>nd</sup> 2019
+                                July 15<sup>th</sup> 2019 &ndash; September 7<sup>th</sup> 2019
                                 <br>
                                 <b> [<a href='/register'>Register</a>]
                                     [<a href='/guidebook/case-study'>Guidebook</a>]</b>

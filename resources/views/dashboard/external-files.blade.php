@@ -23,7 +23,10 @@
                         <a href="{{URL::asset('assets/fusion2019/case-study/guidebook_casestudy.pdf')}}">Guidebook <sup><i class="fas fa-file-download"></i></sup></a>
                     </li>
                     <li>
-                        <a href="{{URL::asset('assets/fusion2019/case-study/formatPreliminary.docx')}}">Essay Format <sup><i class="fas fa-file-download"></i></sup></a>
+                        <a href="https://bit.ly/StoryboardExp">Storyboard Format <sup><i class="fas fa-link"></i></sup></a>
+                    </li>
+                    <li>
+                        <a href="{{URL::asset('assets/fusion2019/case-study/studyCaseContest2019.pdf')}}">Preliminary Study Case <sup><i class="fas fa-file-download"></i></sup></a>
                     </li>
                 </ul>
             </div>

@@ -54,8 +54,10 @@
             </div>
             @else
             <p>
-                It seems you haven't registered to innovation contest 2019 yet.<br>
-                Please insert your team name and pick a subtheme for your essay
+                It seems you haven't registered to Case Study 2019 yet.<br>
+                Please insert your team name and pick a case for your essay<br>
+                <a href="{{URL::asset('assets/fusion2019/case-study/studyCaseContest2019.pdf')}}">Preliminary Study Case <sup><i class="fas fa-file-download"></i></sup></a>  &mdash; .pdf file<br>
+                <a href="https://docs.google.com/document/d/1eRuk1t0wyM8nq9ULyEpLp4pHS6-gOg4kMUA3TQ65Pcg/edit?usp=sharing">Preliminary Study Case <sup><i class="fas fa-link"></i></sup></a>  &mdash; mirror
             </p>
 
             <form action="/dashboard/case-study" method="POST">
@@ -182,6 +184,12 @@
                     <img src="{{URL::asset('assets/images/Vendor Assets/upload.svg')}}">
                     <p>Upload Files</p>
                 </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a href="{{URL::asset('assets/fusion2019/case-study/studyCaseContest2019.pdf')}}">Preliminary Study Case <sup><i class="fas fa-file-download"></i></sup></a>  &mdash; .pdf file<br>
+                <a href="https://docs.google.com/document/d/1eRuk1t0wyM8nq9ULyEpLp4pHS6-gOg4kMUA3TQ65Pcg/edit?usp=sharing">Preliminary Study Case <sup><i class="fas fa-link"></i></sup></a>  &mdash; mirror
             </div>
         </div>
     </div>

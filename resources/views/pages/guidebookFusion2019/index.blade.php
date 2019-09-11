@@ -66,7 +66,7 @@
                         </li>
                         <b><li>
                             You'll Recieve an email that informs you the account's password<br></b>
-                            Check on the junk section if you didn't found the mail on your inbox, this case is very unlikely to occur.
+                            Check on the spam section if you didn't found the mail on your inbox, this case is very unlikely to occur.
                         </li>
                         <b><li>
                             <a href='/login' target='_blank'>Log in</a> with your email and password that has been sent to your email earlier</b><br>

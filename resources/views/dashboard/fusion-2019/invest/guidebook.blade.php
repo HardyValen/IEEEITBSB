@@ -120,7 +120,7 @@
                         <b>Technical Meeting</b>
                         <ul>
                             <li>Venue: Multimedia Room</li>
-                            <li>Date: Thursday, October 11<sup>st</sup>, 2019</li>
+                            <li>Date: Thursday, October 10<sup>th</sup>, 2019</li>
                             <li>Time: 07.30 PM – end (GMT + 7)</li>
                         </ul>
                     </li>
@@ -128,7 +128,7 @@
                         <b>Competition Day (Final)</b>
                         <ul>
                             <li>Venue: Bandung Institut Of Technology</li>
-                            <li>Date: Friday, October 12<sup>nd</sup>, 2019</li>
+                            <li>Date: Friday, October 11<sup>th</sup>, 2019</li>
                             <li>Time: 07.30 PM – end (GMT + 7)</li>
                         </ul>
                     </li>
@@ -251,9 +251,9 @@
                             <li>
                                 The presentation will be held at Institut Teknologi Bandung, West Java, Indonesia, for 3 days: 
                                 <ul>
-                                    <li>October 11<sup>st</sup>, 2019: Technical meeting</li>
-                                    <li>October 12<sup>nd</sup>, 2019: Presentation and Exhibition</li>
-                                    <li>October 13<sup>rd</sup>, 2019 : Grand Seminar and Winner Announcement.</li>
+                                    <li>October 10<sup>th</sup>, 2019: Technical meeting</li>
+                                    <li>October 11<sup>th</sup>, 2019: Presentation and Exhibition</li>
+                                    <li>October 12<sup>th</sup>, 2019 : Grand Seminar and Winner Announcement.</li>
                                 </ul>
                                 Those teams will present their solution in front of judges at the Final day
                             </li>
@@ -423,17 +423,17 @@
                             <tr>
                                 <th scope="row">6</th>
                                 <td>Technical Meeting</td>
-                                <td>October 11<sup>st</sup>, 2019</td>
+                                <td>October 10<sup>th</sup>, 2019</td>
                             </tr>
                             <tr>
                                 <th scope="row">7</th>
                                 <td>Final Competition</td>
-                                <td>October 12<sup>nd</sup>, 2019</td>
+                                <td>October 11<sup>th</sup>, 2019</td>
                             </tr>
                             <tr>
                                 <th scope="row">8</th>
                                 <td>Grand Seminar and Winners Announcement</td>
-                                <td>October 13<sup>rd</sup>, 2019</td>
+                                <td>October 12<sup>th</sup>, 2019</td>
                             </tr>
                         </tbody>
                     </table>

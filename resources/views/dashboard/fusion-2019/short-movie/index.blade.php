@@ -54,8 +54,8 @@
             </div>
             @else
             <p>
-                It seems you haven't registered to innovation contest 2019 yet.<br>
-                Please insert your team name and pick a subtheme for your essay
+                It seems you haven't registered to short movie 2019 yet.<br>
+                Please insert your team name and pick a subtheme for your movie
             </p>
 
             <form action="/dashboard/short-movie" method="POST">
